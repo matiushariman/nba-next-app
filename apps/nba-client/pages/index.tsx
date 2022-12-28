@@ -1,10 +1,13 @@
-import { useState, useEffect } from 'react';
 import {
   fetchScores,
   GetScoresDateGame,
   useGetScoresWithSWR,
 } from '@nba-app/api-client';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+
+import { getTodayDate } from '../utils/getTodayDate';
+import { TodayGames } from '../components/pages/Home';
+import { useEffect, useState } from 'react';
 
 interface HomeProps {
   readonly games: GetScoresDateGame[];
@@ -12,14 +15,14 @@ interface HomeProps {
 
 export default function Home({
   games,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [todayGames, setTodayGames] = useState(games);
   const { data } = useGetScoresWithSWR({
     data: {
-      gameDate: '2022-12-28',
+      gameDate: getTodayDate(),
     },
     config: {
-      refreshInterval: 5000,
+      refreshInterval: 10000,
     },
   });
 
@@ -29,20 +32,12 @@ export default function Home({
     }
   }, [data]);
 
-  return (
-    <ul>
-      {todayGames.map((game) => (
-        <li key={game.profile.gameId}>
-          {game.awayTeam.profile.abbr} @ {game.homeTeam.profile.abbr}
-        </li>
-      ))}
-    </ul>
-  );
+  return <TodayGames games={todayGames} />;
 }
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   const games = await fetchScores(undefined, {
-    gameDate: '2022-12-28',
+    gameDate: getTodayDate(),
   });
 
   return {
