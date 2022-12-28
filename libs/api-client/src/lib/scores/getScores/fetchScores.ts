@@ -1,12 +1,7 @@
-import { GET_SCORES_API_URL } from './getScores.constants';
-
 import type { GetScoresBaseRes, GetScoresReq } from './getScores.types';
 
-export const fetchScores = async (
-  url = `http://localhost:4200${GET_SCORES_API_URL}`,
-  data: GetScoresReq
-) => {
-  const res = await fetch('https://nba-next-app.vercel.app/api/scores', {
+export const fetchScores = async (url: string, data: GetScoresReq) => {
+  const res = await fetch(url, {
     method: 'POST',
     body: JSON.stringify(data),
   });
