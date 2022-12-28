@@ -1,8 +1,4 @@
-import {
-  fetchScores,
-  GetScoresDateGame,
-  GET_SCORES_API_URL,
-} from '@nba-app/api-client';
+import { fetchScores, GetScoresDateGame } from '@nba-app/api-client';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 
 import { getTodayDate } from '../utils/getTodayDate';
@@ -19,12 +15,7 @@ export default function Home({
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const games = await fetchScores(
-    `${process.env['NX_HOST_BASE_URL']}${GET_SCORES_API_URL}`,
-    {
-      gameDate: getTodayDate(),
-    }
-  );
+  const games = await fetchScores(undefined, { gameDate: getTodayDate() });
 
   return {
     props: {

@@ -8,28 +8,28 @@ import { TodayGame } from './TodayGame';
 
 import type { TodayGamesProps } from './TodayGames.types';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { useGetScoresWithSWR } from '@nba-app/api-client';
-import { getTodayDate } from '../../../../utils/getTodayDate';
+import { useState } from 'react';
+// import { useGetScoresWithSWR } from '@nba-app/api-client';
+// import { getTodayDate } from '../../../../utils/getTodayDate';
 
 const drawerWidth = 400;
 
 export const TodayGames = ({ games }: TodayGamesProps) => {
-  const [todayGames, setTodayGames] = useState(games);
-  const { data } = useGetScoresWithSWR({
-    data: {
-      gameDate: getTodayDate(),
-    },
-    config: {
-      refreshInterval: 10000,
-    },
-  });
-
-  useEffect(() => {
-    if (data) {
-      setTodayGames(data);
-    }
-  }, [data]);
+  const [todayGames] = useState(games);
+  // const { data } = useGetScoresWithSWR({
+  //   data: {
+  //     gameDate: getTodayDate(),
+  //   },
+  //   config: {
+  //     refreshInterval: 10000,
+  //   },
+  // });
+  //
+  // useEffect(() => {
+  //   if (data) {
+  //     setTodayGames(data);
+  //   }
+  // }, [data]);
 
   return (
     <Drawer
