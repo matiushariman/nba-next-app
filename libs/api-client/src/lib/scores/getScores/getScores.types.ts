@@ -1,4 +1,4 @@
-interface GetScoresDateGameProfile {
+export interface GetScoresDateGameProfile {
   readonly arenaLocation: string;
   readonly arenaName: string;
   readonly awayTeamId: string;
@@ -12,7 +12,7 @@ interface GetScoresDateGameProfile {
   readonly utcMillis: string;
 }
 
-interface GetScoresDateGameBoxscore {
+export interface GetScoresDateGameBoxscore {
   readonly attendance: string;
   readonly awayScore: number;
   readonly gameLength: string;
@@ -23,12 +23,12 @@ interface GetScoresDateGameBoxscore {
   readonly officialsDisplayName3: string;
   readonly period: string;
   readonly periodClock: string;
-  readonly status: string;
+  readonly status: '1' | '2' | '3';
   readonly statusDesc: string;
   readonly ties: string;
 }
 
-interface GetScoresDateGameTeamProfile {
+export interface GetScoresDateGameTeamProfile {
   readonly abbr: string;
   readonly city: string;
   readonly cityEn: string;
@@ -45,7 +45,7 @@ interface GetScoresDateGameTeamProfile {
   readonly nameEn: string;
 }
 
-interface GetScoresDateGameTeamMatchup {
+export interface GetScoresDateGameTeamMatchup {
   readonly confRank: string;
   readonly divRank: string;
   readonly losses: string;
@@ -53,7 +53,7 @@ interface GetScoresDateGameTeamMatchup {
   readonly wins: string;
 }
 
-interface GetScoresDateGameTeamScore {
+export interface GetScoresDateGameTeamScore {
   readonly assists: number;
   readonly biggestLead: number;
   readonly blocks: number;
@@ -155,7 +155,7 @@ interface GetScoresDateGameTeamGameLeader {
   readonly statTotal: GetScoresDateGameTeamGameLeaderStatTotal;
 }
 
-interface GetScoresDateGameTeam {
+export interface GetScoresDateGameTeam {
   readonly profile: GetScoresDateGameTeamProfile;
   readonly matchup: GetScoresDateGameTeamMatchup;
   readonly score: GetScoresDateGameTeamScore;
