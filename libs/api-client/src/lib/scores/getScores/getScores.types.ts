@@ -175,13 +175,13 @@ export interface GetScoresDateGame {
   readonly seriesText: null | string;
 }
 
-interface GetScoresDate {
+export interface GetScoresDate {
   readonly games: GetScoresDateGame[];
   readonly dateMillis: string;
   readonly gameCount: string;
 }
 
-export interface GetScoresRes {
+export interface GetScoresPayload {
   readonly league: { readonly id: '00'; readonly name: 'NBA' };
   readonly season: {
     readonly isCurrent: string;
@@ -197,13 +197,13 @@ export interface GetScoresRes {
     readonly year: string;
     readonly yearDisplay: string;
   };
-  readonly date: GetScoresDate;
+  readonly date: GetScoresDate | null;
   readonly nextAvailableDateMillis: string;
   readonly utcMillis: string;
 }
 
 export interface GetScoresBaseRes {
-  readonly payload: GetScoresRes;
+  readonly payload: GetScoresPayload;
 }
 
 export interface GetScoresReq {
