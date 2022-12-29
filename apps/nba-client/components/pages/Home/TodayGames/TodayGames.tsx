@@ -10,8 +10,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
 import { useEffect, useState } from 'react';
 import { useGetScoresWithSWR } from '@nba-app/api-client';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { formatDate } from '@nba-app/date-utils';
 
@@ -88,54 +86,52 @@ export const TodayGames = ({ games }: TodayGamesProps) => {
   };
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <Drawer open={open} variant="permanent" anchor="left">
-        <Toolbar />
-        <List>
-          <ListItem sx={{ position: 'relative' }}>
-            <IconButton
-              color="primary"
-              aria-label={open ? 'minimize scores' : 'expand scores'}
-              onClick={() => {
-                setOpen((prevOpen) => !prevOpen);
-              }}
-            >
-              {open ? <ChevronLeftOutlinedIcon /> : <MenuIcon />}
-            </IconButton>
-            <ListItemText
-              primaryTypographyProps={{
-                sx: {
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                },
-              }}
-              primary={
-                open ? (
-                  <DesktopDatePicker
-                    inputFormat="ddd, MMM DD"
-                    value={selectedDate}
-                    onChange={handleChange}
-                    disableMaskedInput
-                    renderInput={(params) => (
-                      <TextField
-                        {...params}
-                        inputProps={{ ...params.inputProps, readOnly: true }}
-                      />
-                    )}
-                  />
-                ) : (
-                  formatDate(selectedDate, 'ddd, MMM DD')
-                )
-              }
-            />
+    <Drawer open={open} variant="permanent" anchor="left">
+      <Toolbar />
+      <List>
+        <ListItem sx={{ position: 'relative' }}>
+          <IconButton
+            color="primary"
+            aria-label={open ? 'minimize scores' : 'expand scores'}
+            onClick={() => {
+              setOpen((prevOpen) => !prevOpen);
+            }}
+          >
+            {open ? <ChevronLeftOutlinedIcon /> : <MenuIcon />}
+          </IconButton>
+          <ListItemText
+            primaryTypographyProps={{
+              sx: {
+                fontWeight: 'bold',
+                textAlign: 'center',
+              },
+            }}
+            primary={
+              open ? (
+                <DesktopDatePicker
+                  inputFormat="ddd, MMM DD"
+                  value={selectedDate}
+                  onChange={handleChange}
+                  disableMaskedInput
+                  renderInput={(params) => (
+                    <TextField
+                      {...params}
+                      inputProps={{ ...params.inputProps, readOnly: true }}
+                    />
+                  )}
+                />
+              ) : (
+                formatDate(selectedDate, 'ddd, MMM DD')
+              )
+            }
+          />
+        </ListItem>
+        {todayGames.map((game) => (
+          <ListItem key={game.profile.gameId} disablePadding={!open}>
+            {open ? <TodayGame game={game} /> : <MiniTodayGame game={game} />}
           </ListItem>
-          {todayGames.map((game) => (
-            <ListItem key={game.profile.gameId} disablePadding={!open}>
-              {open ? <TodayGame game={game} /> : <MiniTodayGame game={game} />}
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-    </LocalizationProvider>
+        ))}
+      </List>
+    </Drawer>
   );
 };
