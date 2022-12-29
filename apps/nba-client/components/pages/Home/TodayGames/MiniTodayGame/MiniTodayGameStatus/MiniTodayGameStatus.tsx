@@ -1,7 +1,6 @@
 import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
-
-import { getLiveStatus } from '../../../../../../utils/getLiveStatus';
+import { displayLiveGameStatusText } from '@nba-app/formatting-utils';
 
 import type { MinTodayGameStatusProps } from './MiniTodayGameStatus.types';
 
@@ -31,7 +30,7 @@ export const MiniTodayGameStatus = ({
           alignItems: 'center',
         })}
       >
-        {getLiveStatus({ period, periodClock, statusDesc })}
+        {displayLiveGameStatusText(period, periodClock, statusDesc)}
       </Typography>
     );
   }
