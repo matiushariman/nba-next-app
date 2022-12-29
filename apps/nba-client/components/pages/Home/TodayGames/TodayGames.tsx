@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 import { useGetScoresWithSWR } from '@nba-app/api-client';
 import { getTodayDate } from '../../../../utils/getTodayDate';
 
-const drawerWidth = 400;
+const drawerWidth = 445;
 
 export const TodayGames = ({ games }: TodayGamesProps) => {
   const [todayGames, setTodayGames] = useState(games);

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import type { TodayGameTeamProps } from './TodayGameTeam.types';
 
 export const TodayGameTeam = ({ id, name, teamRecord }: TodayGameTeamProps) => (
-  <Stack sx={{ alignItems: 'center' }}>
+  <Stack sx={{ alignItems: 'center', width: 100 }}>
     <Image
       src={`https://cdn.nba.com/logos/nba/${id}/global/L/logo.svg`}
       alt={name}

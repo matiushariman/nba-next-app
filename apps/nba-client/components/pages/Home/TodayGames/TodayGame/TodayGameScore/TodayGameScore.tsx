@@ -16,7 +16,7 @@ export const TodayGameScore = ({
   const didHomeWin = isGameOver && homeScore > awayScore;
 
   return (
-    <Box sx={{ display: 'flex', p: 2 }}>
+    <Box sx={{ display: 'flex' }}>
       <Typography variant="h5" fontWeight={didAwayWin ? 'bold' : 'normal'}>
         {awayScore}
       </Typography>
