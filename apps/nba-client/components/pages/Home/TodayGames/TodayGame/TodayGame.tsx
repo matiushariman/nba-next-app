@@ -2,11 +2,11 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
+import { displayFormattedTeamRecord } from '@nba-app/formatting-utils';
 
 import { TodayGameTeam } from './TodayGameTeam';
 import { TodayGameScore } from './TodayGameScore';
 import { TodayGameStatus } from './TodayGameStatus';
-import { getTeamRecord } from '../../../../../utils/getTeamRecord';
 
 import type { TodayGameProps } from './TodayGame.types';
 
@@ -35,7 +35,10 @@ export const TodayGame = ({ game }: TodayGameProps) => (
         <TodayGameTeam
           name={game.awayTeam.profile.name}
           id={game.awayTeam.profile.id}
-          teamRecord={getTeamRecord(game.awayTeam.matchup)}
+          teamRecord={displayFormattedTeamRecord(
+            game.awayTeam.matchup.wins,
+            game.awayTeam.matchup.losses
+          )}
         />
         <Box sx={{ flexGrow: 1 }}>
           <TodayGameScore
@@ -47,7 +50,10 @@ export const TodayGame = ({ game }: TodayGameProps) => (
         <TodayGameTeam
           name={game.homeTeam.profile.name}
           id={game.homeTeam.profile.id}
-          teamRecord={getTeamRecord(game.homeTeam.matchup)}
+          teamRecord={displayFormattedTeamRecord(
+            game.homeTeam.matchup.wins,
+            game.homeTeam.matchup.losses
+          )}
         />
       </Box>
     </CardContent>
