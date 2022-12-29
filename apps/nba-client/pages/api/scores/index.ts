@@ -8,7 +8,8 @@ export default async function scoresHandler(
   res: NextApiResponse
 ) {
   if (req.method === 'POST') {
-    const { gameDate } = req.body as GetScoresReq;
+    const { gameDate } = JSON.parse(req.body) as GetScoresReq;
+
     const { data } = await axios.get<GetScoresBaseRes>(
       `https://sg.global.nba.com/stats2/scores/daily.json?gameDate=${gameDate}`
     );
