@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nba-app/api-client": ["libs/api-client/src/index.ts"]
+      "@nba-app/api-client": ["libs/api-client/src/index.ts"],
+      "@nba-app/date-utils": ["libs/date-utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
