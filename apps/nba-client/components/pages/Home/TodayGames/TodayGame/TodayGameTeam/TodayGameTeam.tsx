@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { TeamLogo } from '../../../../../ui/TeamLogo';
+import { TeamLogo } from '@nba-app/ui';
 
 import type { TodayGameTeamProps } from './TodayGameTeam.types';
 
