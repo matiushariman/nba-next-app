@@ -17,7 +17,8 @@
     "paths": {
       "@nba-app/api-client": ["libs/api-client/src/index.ts"],
       "@nba-app/date-utils": ["libs/date-utils/src/index.ts"],
-      "@nba-app/formatting-utils": ["libs/formatting-utils/src/index.ts"]
+      "@nba-app/formatting-utils": ["libs/formatting-utils/src/index.ts"],
+      "@nba-app/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
