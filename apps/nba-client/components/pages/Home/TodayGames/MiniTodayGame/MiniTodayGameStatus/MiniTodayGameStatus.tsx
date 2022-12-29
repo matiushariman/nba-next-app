@@ -1,8 +1,10 @@
-import type { MinTodayGameStatusProps } from './MiniTodayGameStatus.types';
-import { getLocalTime } from '../../../../../../utils/getLocalTime';
+import { convertESTtoLocalTime } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
 import dayjs from 'dayjs';
+
 import { getLiveStatus } from '../../../../../../utils/getLiveStatus';
+
+import type { MinTodayGameStatusProps } from './MiniTodayGameStatus.types';
 
 export const MiniTodayGameStatus = ({
   statusDesc,
@@ -12,7 +14,7 @@ export const MiniTodayGameStatus = ({
   periodClock,
 }: MinTodayGameStatusProps) => {
   if (status === '1') {
-    const localDate = getLocalTime(dateTimeEt);
+    const localDate = convertESTtoLocalTime(dateTimeEt);
 
     return (
       <Typography textTransform="uppercase" fontWeight="bold" variant="body2">

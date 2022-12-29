@@ -1,9 +1,9 @@
+import { convertESTtoLocalTime } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
 import dayjs from 'dayjs';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 import { getLiveStatus } from '../../../../../../utils/getLiveStatus';
-import { getLocalTime } from '../../../../../../utils/getLocalTime';
 
 import type { TodayGameStatusProps } from './TodayGameStatus.types';
 
@@ -15,7 +15,7 @@ export const TodayGameStatus = ({
   periodClock,
 }: TodayGameStatusProps) => {
   if (status === '1') {
-    const localDate = getLocalTime(dateTimeEt);
+    const localDate = convertESTtoLocalTime(dateTimeEt);
 
     return (
       <Typography textTransform="uppercase" fontWeight="bold">
