@@ -1,6 +1,5 @@
-import { convertESTtoLocalTime } from '@nba-app/date-utils';
+import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
-import dayjs from 'dayjs';
 
 import { getLiveStatus } from '../../../../../../utils/getLiveStatus';
 
@@ -18,7 +17,7 @@ export const MiniTodayGameStatus = ({
 
     return (
       <Typography textTransform="uppercase" fontWeight="bold" variant="body2">
-        {dayjs(localDate).format('H:mm A')}
+        {formatDate(localDate, 'H:mm A')}
       </Typography>
     );
   } else if (status === '2') {

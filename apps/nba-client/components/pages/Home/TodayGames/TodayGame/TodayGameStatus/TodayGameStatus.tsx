@@ -1,6 +1,5 @@
-import { convertESTtoLocalTime } from '@nba-app/date-utils';
+import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
-import dayjs from 'dayjs';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 import { getLiveStatus } from '../../../../../../utils/getLiveStatus';
@@ -19,7 +18,7 @@ export const TodayGameStatus = ({
 
     return (
       <Typography textTransform="uppercase" fontWeight="bold">
-        {dayjs(localDate).format('H:mm A')}
+        {formatDate(localDate, 'H:mm A')}
       </Typography>
     );
   } else if (status === '2') {
