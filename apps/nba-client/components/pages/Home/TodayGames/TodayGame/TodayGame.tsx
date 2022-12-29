@@ -11,8 +11,16 @@ import { getTeamRecord } from '../../../../../utils/getTeamRecord';
 import type { TodayGameProps } from './TodayGame.types';
 
 export const TodayGame = ({ game }: TodayGameProps) => (
-  <Card sx={{ width: '100%' }} variant="outlined">
-    <CardContent>
+  <Card
+    sx={(theme) => ({
+      width: '100%',
+      ...(theme.palette.mode === 'dark' && {
+        backgroundColor: theme.palette.grey['900'],
+      }),
+    })}
+    variant="outlined"
+  >
+    <CardContent sx={{ display: 'flex', justifyContent: 'space-around' }}>
       <TodayGameStatus
         status={game.boxscore.status}
         statusDesc={game.boxscore.statusDesc}

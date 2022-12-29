@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import dayjs from 'dayjs';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 import { getLiveStatus } from '../../../../../../utils/getLiveStatus';
 import { getLocalTime } from '../../../../../../utils/getLocalTime';
@@ -17,11 +18,7 @@ export const TodayGameStatus = ({
     const localDate = getLocalTime(dateTimeEt);
 
     return (
-      <Typography
-        textTransform="uppercase"
-        textAlign="center"
-        fontWeight="bold"
-      >
+      <Typography textTransform="uppercase" fontWeight="bold">
         {dayjs(localDate).format('H:mm A')}
       </Typography>
     );
@@ -29,19 +26,19 @@ export const TodayGameStatus = ({
     return (
       <Typography
         textTransform="uppercase"
-        textAlign="center"
         sx={(theme) => ({
           color: theme.palette.error.main,
+          display: 'flex',
+          alignItems: 'center',
         })}
       >
-        {getLiveStatus({ period, periodClock, statusDesc })}
+        <span>
+          <LiveTvIcon sx={{ mr: 1 }} />
+        </span>
+        <span>{getLiveStatus({ period, periodClock, statusDesc })}</span>
       </Typography>
     );
   }
 
-  return (
-    <Typography textTransform="uppercase" textAlign="center">
-      {statusDesc}
-    </Typography>
-  );
+  return <Typography textTransform="uppercase">{statusDesc}</Typography>;
 };

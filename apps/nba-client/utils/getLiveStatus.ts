@@ -16,5 +16,5 @@ export const getLiveStatus = ({
   const periodText =
     Number(period) <= 4 ? `Q${period}` : `OT${Number(period) - 4}`;
 
-  return `LIVE ${periodText} ${periodClock}`;
+  return `${periodText} ${periodClock}`;
 };
