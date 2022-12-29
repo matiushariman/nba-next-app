@@ -5,6 +5,6 @@ import type {
 
 export type TodayGameStatusProps = Pick<
   GetScoresDateGameBoxscore,
-  'status' | 'statusDesc'
+  'status' | 'statusDesc' | 'period' | 'periodClock'
 > &
   Pick<GetScoresDateGameProfile, 'dateTimeEt'>;

@@ -17,6 +17,8 @@ export const TodayGame = ({ game }: TodayGameProps) => (
         status={game.boxscore.status}
         statusDesc={game.boxscore.statusDesc}
         dateTimeEt={game.profile.dateTimeEt}
+        period={game.boxscore.period}
+        periodClock={game.boxscore.periodClock}
       />
     </CardContent>
     <Divider />
