@@ -6,8 +6,8 @@ import {
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Theme } from '@mui/material/styles';
+import { formatDate } from '@nba-app/date-utils';
 
-import { getTodayDate } from '../utils/getTodayDate';
 import { TodayGames } from '../components/pages/Home';
 
 interface HomeProps {
@@ -26,7 +26,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   const games = await fetchScores(
     `${process.env['NX_HOST_BASE_URL']}${GET_SCORES_API_URL}`,
     {
-      gameDate: getTodayDate(),
+      gameDate: formatDate(new Date()),
     }
   );
 
