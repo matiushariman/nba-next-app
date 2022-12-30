@@ -1,4 +1,43 @@
-# NbaApp
+# NBA Next App
+
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Overall</th>
+      <th rowspan="2">NBA Client</th>
+      <th colspan="4">Libs</th>
+    </tr>
+    <tr>
+      <th>api-client</th>
+      <th>date-utils</th>
+      <th>formatting-utils</th>
+      <th>UI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg" alt="overall coverage" />
+      </td>
+      <td align="center">
+        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=nba-client" alt="app coverage" />
+      </td>
+      <td align="center">
+        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=api-client" alt="api client coverage" />
+      </td>
+      <td align="center">
+        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=date-utils" alt="date utils coverage" />
+      </td>
+      <td align="center">
+        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=formatting-utils" alt="formatting utils coverage" />
+      </td>
+      <td align="center">
+        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=ui" alt="UI coverage" />
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <a href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
