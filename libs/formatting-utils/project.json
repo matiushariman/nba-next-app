@@ -5,13 +5,31 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/formatting-utils",
         "main": "libs/formatting-utils/src/index.ts",
+        "outputPath": "dist/libs/formatting-utils",
+        "outputFileName": "main.js",
         "tsConfig": "libs/formatting-utils/tsconfig.lib.json",
-        "assets": ["libs/formatting-utils/*.md"]
+        "project": "libs/formatting-utils/package.json",
+        "assets": [
+          {
+            "glob": "libs/formatting-utils/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "platform": "node"
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": true
+        }
       }
     },
     "lint": {

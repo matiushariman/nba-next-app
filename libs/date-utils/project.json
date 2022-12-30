@@ -5,13 +5,31 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/date-utils",
         "main": "libs/date-utils/src/index.ts",
+        "outputPath": "dist/libs/date-utils",
+        "outputFileName": "main.js",
         "tsConfig": "libs/date-utils/tsconfig.lib.json",
-        "assets": ["libs/date-utils/*.md"]
+        "project": "libs/date-utils/package.json",
+        "assets": [
+          {
+            "glob": "libs/date-utils/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "platform": "node"
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": true
+        }
       }
     },
     "lint": {
