@@ -30,6 +30,7 @@ export const Header = () => {
           height={30}
         />
         <IconButton
+          color="inherit"
           onClick={colorMode.toggleColorMode}
           aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
         >
