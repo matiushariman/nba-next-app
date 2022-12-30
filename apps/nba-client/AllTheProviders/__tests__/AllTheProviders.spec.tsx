@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ColorModeContext } from '@nba-app/ui-old';
+import { ColorModeContext } from '@nba-app/ui';
 import { useTheme } from '@mui/material/styles';
 import { useContext } from 'react';
 import { AllTheProviders } from '../AllTheProviders';
