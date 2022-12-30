@@ -16,7 +16,11 @@ export const TodayGameStatus = ({
     const localDate = convertESTtoLocalTime(dateTimeEt);
 
     return (
-      <Typography textTransform="uppercase" fontWeight="bold">
+      <Typography
+        aria-label="game starting time"
+        textTransform="uppercase"
+        fontWeight="bold"
+      >
         {formatDate(localDate, 'H:mm A')}
       </Typography>
     );

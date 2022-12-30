@@ -15,7 +15,12 @@ export const MiniTodayGameStatus = ({
     const localDate = convertESTtoLocalTime(dateTimeEt);
 
     return (
-      <Typography textTransform="uppercase" fontWeight="bold" variant="body2">
+      <Typography
+        aria-label="game starting time"
+        textTransform="uppercase"
+        fontWeight="bold"
+        variant="body2"
+      >
         {formatDate(localDate, 'H:mm A')}
       </Typography>
     );
