@@ -42,13 +42,18 @@ export const TodayGames = ({ games }: TodayGamesProps) => {
   };
 
   return (
-    <Drawer open={open} variant="permanent" anchor="left">
+    <Drawer
+      open={open}
+      variant="permanent"
+      anchor="left"
+      aria-label={open ? 'Expanded scoreboard' : 'Mini scoreboard'}
+    >
       <Toolbar />
       <List>
         <ListItem sx={{ position: 'relative' }}>
           <IconButton
             color="primary"
-            aria-label={open ? 'minimize scores' : 'expand scores'}
+            aria-label={open ? 'minimize scoreboard' : 'expand scoreboard'}
             onClick={() => {
               setOpen((prevOpen) => !prevOpen);
             }}
