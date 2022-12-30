@@ -11,5 +11,6 @@ export default {
   coverageDirectory: '../../coverage/apps/nba-client',
   setupFilesAfterEnv: ['./jest.setup.ts'],
   collectCoverage: true,
+  collectCoverageFrom: ['!./**/*.styles.tsx'],
   coverageReporters: ['json', ['text', { skipFull: true }]],
 };
