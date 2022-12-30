@@ -1,6 +1,6 @@
 import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
-import { displayLiveGameStatusText } from '@nba-app/formatting-utils';
+import { displayLiveGameStatusText } from '@nba-app/formatting-utils-old';
 
 import type { MinTodayGameStatusProps } from './MiniTodayGameStatus.types';
 

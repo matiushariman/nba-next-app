@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'formatting-utils',
+  displayName: 'formatting-utils-old',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,7 +11,7 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/formatting-utils',
+  coverageDirectory: '../../coverage/libs/formatting-utils-old',
   collectCoverage: true,
   coverageReporters: ['json', ['text', { skipFull: true }]],
 };
