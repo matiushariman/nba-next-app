@@ -1,7 +1,7 @@
 import { render, screen } from '@nba-app/test-utils';
 import { MiniTodayGameStatus } from '../MiniTodayGameStatus';
 
-describe(MiniTodayGameStatus, () => {
+describe('MiniTodayGameStatus', () => {
   it('should render game time if game status is 1 (PRE GAME)', () => {
     render(
       <MiniTodayGameStatus

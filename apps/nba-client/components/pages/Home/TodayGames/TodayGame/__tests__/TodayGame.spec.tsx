@@ -1,7 +1,7 @@
 import { render, screen } from '@nba-app/test-utils';
 import { TodayGame } from '../TodayGame';
 
-describe(TodayGame, () => {
+describe('TodayGame', () => {
   it('should render grey background in dark mode', () => {
     render(
       <TodayGame

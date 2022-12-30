@@ -3,11 +3,11 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["jest", "node", "@testing-library/jest-dom"],
+    "types": ["vitest/globals", "node"],
     "jsx": "react"
   },
   "include": [
-    "jest.config.ts",
+    "vite.config.ts",
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.tsx",
