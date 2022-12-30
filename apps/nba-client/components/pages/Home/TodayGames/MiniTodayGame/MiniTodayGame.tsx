@@ -18,6 +18,7 @@ export const MiniTodayGame = ({ game }: MiniTodayGameProps) => (
       }),
     })}
     variant="outlined"
+    aria-label={`${game.awayTeam.profile.name} @ ${game.homeTeam.profile.name}`}
   >
     <Box sx={{ p: 1 }}>
       <Stack spacing={1}>

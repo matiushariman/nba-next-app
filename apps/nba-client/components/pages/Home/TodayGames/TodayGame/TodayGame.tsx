@@ -19,6 +19,7 @@ export const TodayGame = ({ game }: TodayGameProps) => (
       }),
     })}
     variant="outlined"
+    aria-label={`${game.awayTeam.profile.name} @ ${game.homeTeam.profile.name}`}
   >
     <CardContent sx={{ display: 'flex', justifyContent: 'space-around' }}>
       <TodayGameStatus
