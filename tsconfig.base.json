@@ -18,9 +18,6 @@
       "@nba-app/api-client": ["libs/api-client/src/index.ts"],
       "@nba-app/date-utils": ["libs/date-utils/src/index.ts"],
       "@nba-app/formatting-utils": ["libs/formatting-utils/src/index.ts"],
-      "@nba-app/formatting-utils-old": [
-        "libs/formatting-utils-old/src/index.ts"
-      ],
       "@nba-app/test-utils": ["libs/test-utils/src/index.ts"],
       "@nba-app/ui": ["libs/ui/src/index.ts"],
       "@nba-app/ui-test-utils": ["libs/ui-test-utils/src/index.ts"]

@@ -1,7 +1,7 @@
 import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
-import { displayLiveGameStatusText } from '@nba-app/formatting-utils-old';
+import { displayLiveGameStatusText } from '@nba-app/formatting-utils';
 
 import type { TodayGameStatusProps } from './TodayGameStatus.types';
 

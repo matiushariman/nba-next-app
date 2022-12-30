@@ -1,7 +1,7 @@
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import { displayFormattedTeamRecord } from '@nba-app/formatting-utils-old';
+import { displayFormattedTeamRecord } from '@nba-app/formatting-utils';
 
 import { MiniTodayGameTeam } from './MiniTodayGameTeam';
 import { MiniTodayGameStatus } from './MiniTodayGameStatus';
