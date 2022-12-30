@@ -9,6 +9,5 @@ export default {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/ui',
   setupFilesAfterEnv: ['./jest.setup.ts'],
-  collectCoverage: true,
   coverageReporters: ['json', ['text', { skipFull: true }]],
 };

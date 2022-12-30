@@ -63,7 +63,7 @@ jobs:
             ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock.json') }}
             ${{ runner.os }}-modules-${{ env.cache-name }}-
       - name: Run unit test
-        run: yarn test:all
+        run: yarn test:all --coverage
       - name: Upload coverage as artifact
         uses: actions/upload-artifact@v3
         with:

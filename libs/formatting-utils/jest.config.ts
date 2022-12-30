@@ -8,6 +8,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/libs/formatting-utils',
-  collectCoverage: true,
   coverageReporters: ['json', ['text', { skipFull: true }]],
 };
