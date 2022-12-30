@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { TeamLogo } from '../../../../../ui/TeamLogo';
+import { TeamLogo } from '@nba-app/ui';
 
 import type { MiniTodayGameTeamProps } from './MiniTodayGameTeam.types';
 

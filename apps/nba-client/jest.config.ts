@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 export default {
   displayName: 'nba-client',
   preset: '../../jest.preset.js',
@@ -8,4 +9,7 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/nba-client',
+  setupFilesAfterEnv: ['./jest.setup.ts'],
+  collectCoverage: true,
+  coverageReporters: ['json', ['text', { skipFull: true }]],
 };

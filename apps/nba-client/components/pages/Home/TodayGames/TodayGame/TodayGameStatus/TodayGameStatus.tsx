@@ -1,9 +1,7 @@
+import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
-import dayjs from 'dayjs';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
-
-import { getLiveStatus } from '../../../../../../utils/getLiveStatus';
-import { getLocalTime } from '../../../../../../utils/getLocalTime';
+import { displayLiveGameStatusText } from '@nba-app/formatting-utils';
 
 import type { TodayGameStatusProps } from './TodayGameStatus.types';
 
@@ -15,11 +13,15 @@ export const TodayGameStatus = ({
   periodClock,
 }: TodayGameStatusProps) => {
   if (status === '1') {
-    const localDate = getLocalTime(dateTimeEt);
+    const localDate = convertESTtoLocalTime(dateTimeEt);
 
     return (
-      <Typography textTransform="uppercase" fontWeight="bold">
-        {dayjs(localDate).format('H:mm A')}
+      <Typography
+        aria-label="game starting time"
+        textTransform="uppercase"
+        fontWeight="bold"
+      >
+        {formatDate(localDate, 'H:mm A')}
       </Typography>
     );
   } else if (status === '2') {
@@ -35,7 +37,9 @@ export const TodayGameStatus = ({
         <span>
           <LiveTvIcon sx={{ mr: 1 }} />
         </span>
-        <span>{getLiveStatus({ period, periodClock, statusDesc })}</span>
+        <span>
+          {displayLiveGameStatusText(period, periodClock, statusDesc)}
+        </span>
       </Typography>
     );
   }

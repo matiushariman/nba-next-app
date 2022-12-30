@@ -1,8 +1,8 @@
-import type { MinTodayGameStatusProps } from './MiniTodayGameStatus.types';
-import { getLocalTime } from '../../../../../../utils/getLocalTime';
+import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils';
 import Typography from '@mui/material/Typography';
-import dayjs from 'dayjs';
-import { getLiveStatus } from '../../../../../../utils/getLiveStatus';
+import { displayLiveGameStatusText } from '@nba-app/formatting-utils';
+
+import type { MinTodayGameStatusProps } from './MiniTodayGameStatus.types';
 
 export const MiniTodayGameStatus = ({
   statusDesc,
@@ -12,11 +12,16 @@ export const MiniTodayGameStatus = ({
   periodClock,
 }: MinTodayGameStatusProps) => {
   if (status === '1') {
-    const localDate = getLocalTime(dateTimeEt);
+    const localDate = convertESTtoLocalTime(dateTimeEt);
 
     return (
-      <Typography textTransform="uppercase" fontWeight="bold" variant="body2">
-        {dayjs(localDate).format('H:mm A')}
+      <Typography
+        aria-label="game starting time"
+        textTransform="uppercase"
+        fontWeight="bold"
+        variant="body2"
+      >
+        {formatDate(localDate, 'H:mm A')}
       </Typography>
     );
   } else if (status === '2') {
@@ -30,7 +35,7 @@ export const MiniTodayGameStatus = ({
           alignItems: 'center',
         })}
       >
-        {getLiveStatus({ period, periodClock, statusDesc })}
+        {displayLiveGameStatusText(period, periodClock, statusDesc)}
       </Typography>
     );
   }
