@@ -9,4 +9,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/nba-client',
+  setupFilesAfterEnv: ['./jest.setup.ts'],
 };

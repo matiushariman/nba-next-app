@@ -1,5 +1,5 @@
 import { AppBar, Toolbar } from '@mui/material';
-import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 import { useTheme } from '@mui/material/styles';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -10,6 +10,7 @@ import Image from 'next/image';
 export const Header = () => {
   const colorMode = useContext(ColorModeContext);
   const theme = useTheme();
+  const isDarkMode = theme.palette.mode === 'dark';
 
   return (
     <AppBar
@@ -28,15 +29,12 @@ export const Header = () => {
           width={52}
           height={30}
         />
-        <Button
+        <IconButton
           onClick={colorMode.toggleColorMode}
-          color="inherit"
-          startIcon={
-            theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />
-          }
+          aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
         >
-          {theme.palette.mode}
-        </Button>
+          {isDarkMode ? <DarkModeIcon /> : <LightModeIcon />}
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
