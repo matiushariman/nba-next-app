@@ -1,7 +1,7 @@
 {
-  "name": "ui-test-utils",
+  "name": "ui-test-utils-old",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ui-test-utils/src",
+  "sourceRoot": "libs/ui-test-utils-old/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,14 +9,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ui-test-utils/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/ui-test-utils-old/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ui-test-utils/jest.config.ts",
+        "jestConfig": "libs/ui-test-utils-old/jest.config.ts",
         "passWithNoTests": true
       }
     }

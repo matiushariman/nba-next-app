@@ -1,4 +1,4 @@
-import { render, screen } from '@nba-app/ui-test-utils';
+import { render, screen } from '@nba-app/ui-test-utils-old';
 
 import { TeamLogo } from '../TeamLogo';
 
