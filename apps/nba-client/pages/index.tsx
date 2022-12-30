@@ -2,7 +2,7 @@ import {
   fetchScores,
   GetScoresDateGame,
   GET_SCORES_API_URL,
-} from '@nba-app/api-client';
+} from '@nba-app/api-client-old';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Theme } from '@mui/material/styles';

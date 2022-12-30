@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
-import type { GetScoresReq, GetScoresBaseRes } from '@nba-app/api-client';
+import type { GetScoresReq, GetScoresBaseRes } from '@nba-app/api-client-old';
 
 export default async function scoresHandler(
   req: NextApiRequest,

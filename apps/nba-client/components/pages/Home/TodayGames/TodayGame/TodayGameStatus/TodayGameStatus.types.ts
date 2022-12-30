@@ -1,7 +1,7 @@
 import type {
   GetScoresDateGameBoxscore,
   GetScoresDateGameProfile,
-} from '@nba-app/api-client';
+} from '@nba-app/api-client-old';
 
 export type TodayGameStatusProps = Pick<
   GetScoresDateGameBoxscore,

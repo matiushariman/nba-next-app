@@ -2,7 +2,7 @@ import type {
   GetScoresDateGameTeamProfile,
   GetScoresDateGameTeamScore,
   GetScoresDateGameBoxscore,
-} from '@nba-app/api-client';
+} from '@nba-app/api-client-old';
 
 export interface MiniTodayGameTeamProps
   extends Pick<GetScoresDateGameTeamProfile, 'id' | 'name' | 'abbr'>,
