@@ -1,4 +1,4 @@
-import type { GetScoresDateGame } from '@nba-app/api-client-old';
+import type { GetScoresDateGame } from '@nba-app/api-client';
 
 export interface TodayGamesProps {
   readonly games: GetScoresDateGame[];

@@ -1,7 +1,7 @@
 import type {
   GetScoresDateGameTeamScore,
   GetScoresDateGameBoxscore,
-} from '@nba-app/api-client-old';
+} from '@nba-app/api-client';
 
 type Score = GetScoresDateGameTeamScore['score'];
 

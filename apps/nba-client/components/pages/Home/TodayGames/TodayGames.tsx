@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
 import { useEffect, useState } from 'react';
-import { useGetScoresWithSWR } from '@nba-app/api-client-old';
+import { useGetScoresWithSWR } from '@nba-app/api-client';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { formatDate } from '@nba-app/date-utils';
 
