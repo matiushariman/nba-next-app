@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@nba-app/api-client": ["libs/api-client/src/index.ts"],
+      "@nba-app/api-client-old": ["libs/api-client-old/src/index.ts"],
       "@nba-app/date-utils": ["libs/date-utils/src/index.ts"],
       "@nba-app/formatting-utils": ["libs/formatting-utils/src/index.ts"],
       "@nba-app/test-utils": ["libs/test-utils/src/index.ts"],

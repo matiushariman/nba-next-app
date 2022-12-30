@@ -1,6 +1,6 @@
 import { formatDate } from '../formatDate';
 
-describe(formatDate, () => {
+describe('formatDate', () => {
   it('should return formatted date in default template format', () => {
     expect(formatDate('2019-01-25')).toEqual('2019-01-25');
   });

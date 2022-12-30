@@ -1,1 +1,2 @@
-export * from './lib';
+export * from './context';
+export * from './TeamLogo';

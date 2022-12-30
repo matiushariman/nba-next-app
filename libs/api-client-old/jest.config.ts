@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'formatting-utils',
+  displayName: 'api-client-old',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,7 +11,8 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/formatting-utils',
+  coverageDirectory: '../../coverage/libs/api-client-old',
+  setupFilesAfterEnv: ['./jest.setup.ts'],
   collectCoverage: true,
   coverageReporters: ['json', ['text', { skipFull: true }]],
 };

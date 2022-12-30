@@ -1,11 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`fetchScores should return only games data 1`] = `
-Array [
-  Object {
-    "awayTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+exports[`fetchScores > should return only games data 1`] = `
+[
+  {
+    "awayTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "shai_gilgeous-alexander",
           "country": "Canada",
           "countryEn": "Canada",
@@ -28,7 +28,7 @@ Array [
           "schoolType": "College",
           "weight": "88.5 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 5,
           "blocks": 0,
           "defRebs": 1,
@@ -53,15 +53,15 @@ Array [
           "turnovers": 2,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "12",
         "divRank": "5",
         "losses": "20",
         "seriesText": null,
         "wins": "15",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "shai_gilgeous-alexander",
           "country": "Canada",
           "countryEn": "Canada",
@@ -84,7 +84,7 @@ Array [
           "schoolType": "College",
           "weight": "88.5 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 5,
           "blocks": 0,
           "defRebs": 1,
@@ -109,7 +109,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "OKC",
         "city": "Oklahoma City",
         "cityEn": "Oklahoma City",
@@ -125,8 +125,8 @@ Array [
         "name": "Thunder",
         "nameEn": "Thunder",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "jaylin_williams",
           "country": "United States",
           "countryEn": "United States",
@@ -149,7 +149,7 @@ Array [
           "schoolType": "College",
           "weight": "108.9 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 1,
           "blocks": 1,
           "defRebs": 8,
@@ -174,7 +174,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 15,
         "biggestLead": 3,
         "blocks": 1,
@@ -222,7 +222,7 @@ Array [
         "turnovers": 12,
       },
     },
-    "boxscore": Object {
+    "boxscore": {
       "attendance": "19,425",
       "awayScore": 113,
       "gameLength": "130",
@@ -237,10 +237,10 @@ Array [
       "statusDesc": "Final",
       "ties": "7",
     },
-    "broadcasters": Array [],
-    "homeTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+    "broadcasters": [],
+    "homeTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "lamelo_ball",
           "country": "United States",
           "countryEn": "United States",
@@ -263,7 +263,7 @@ Array [
           "schoolType": "International",
           "weight": "81.6 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 9,
           "blocks": 2,
           "defRebs": 8,
@@ -288,15 +288,15 @@ Array [
           "turnovers": 3,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "14",
         "divRank": "5",
         "losses": "26",
         "seriesText": null,
         "wins": "10",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "lamelo_ball",
           "country": "United States",
           "countryEn": "United States",
@@ -319,7 +319,7 @@ Array [
           "schoolType": "International",
           "weight": "81.6 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 9,
           "blocks": 2,
           "defRebs": 8,
@@ -344,7 +344,7 @@ Array [
           "turnovers": 3,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "CHA",
         "city": "Charlotte",
         "cityEn": "Charlotte",
@@ -360,8 +360,8 @@ Array [
         "name": "Hornets",
         "nameEn": "Hornets",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "mark_williams",
           "country": "United States",
           "countryEn": "United States",
@@ -384,7 +384,7 @@ Array [
           "schoolType": "College",
           "weight": "108.9 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 2,
           "blocks": 2,
           "defRebs": 9,
@@ -409,7 +409,7 @@ Array [
           "turnovers": 1,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 33,
         "biggestLead": 10,
         "blocks": 11,
@@ -458,7 +458,7 @@ Array [
       },
     },
     "ifNecessary": false,
-    "profile": Object {
+    "profile": {
       "arenaLocation": "Charlotte, NC",
       "arenaName": "Spectrum Center",
       "awayTeamId": "1610612760",
@@ -472,12 +472,12 @@ Array [
       "utcMillis": "1672358400000",
     },
     "seriesText": null,
-    "urls": Array [],
+    "urls": [],
   },
-  Object {
-    "awayTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+  {
+    "awayTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "darius_garland",
           "country": "United States",
           "countryEn": "United States",
@@ -500,7 +500,7 @@ Array [
           "schoolType": "College",
           "weight": "87.1 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 8,
           "blocks": 0,
           "defRebs": 0,
@@ -525,15 +525,15 @@ Array [
           "turnovers": 1,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "4",
         "divRank": "2",
         "losses": "14",
         "seriesText": null,
         "wins": "22",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "donovan_mitchell",
           "country": "United States",
           "countryEn": "United States",
@@ -556,7 +556,7 @@ Array [
           "schoolType": "College",
           "weight": "97.5 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 6,
           "blocks": 0,
           "defRebs": 2,
@@ -581,7 +581,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "CLE",
         "city": "Cleveland",
         "cityEn": "Cleveland",
@@ -597,8 +597,8 @@ Array [
         "name": "Cavaliers",
         "nameEn": "Cavaliers",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "jarrett_allen",
           "country": "United States",
           "countryEn": "United States",
@@ -621,7 +621,7 @@ Array [
           "schoolType": "College",
           "weight": "110.2 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 1,
           "blocks": 1,
           "defRebs": 10,
@@ -646,7 +646,7 @@ Array [
           "turnovers": 1,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 29,
         "biggestLead": 7,
         "blocks": 4,
@@ -694,7 +694,7 @@ Array [
         "turnovers": 11,
       },
     },
-    "boxscore": Object {
+    "boxscore": {
       "attendance": "17,274",
       "awayScore": 126,
       "gameLength": "131",
@@ -709,10 +709,10 @@ Array [
       "statusDesc": "Final",
       "ties": "11",
     },
-    "broadcasters": Array [],
-    "homeTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+    "broadcasters": [],
+    "homeTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "tyrese_haliburton",
           "country": "United States",
           "countryEn": "United States",
@@ -735,7 +735,7 @@ Array [
           "schoolType": "College",
           "weight": "83.9 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 9,
           "blocks": 0,
           "defRebs": 2,
@@ -760,15 +760,15 @@ Array [
           "turnovers": 1,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "6",
         "divRank": "3",
         "losses": "17",
         "seriesText": null,
         "wins": "19",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "tyrese_haliburton",
           "country": "United States",
           "countryEn": "United States",
@@ -791,7 +791,7 @@ Array [
           "schoolType": "College",
           "weight": "83.9 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 9,
           "blocks": 0,
           "defRebs": 2,
@@ -816,7 +816,7 @@ Array [
           "turnovers": 1,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "IND",
         "city": "Indiana",
         "cityEn": "Indiana",
@@ -832,8 +832,8 @@ Array [
         "name": "Pacers",
         "nameEn": "Pacers",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "myles_turner",
           "country": "United States",
           "countryEn": "United States",
@@ -856,7 +856,7 @@ Array [
           "schoolType": "College",
           "weight": "113.4 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 3,
           "blocks": 6,
           "defRebs": 10,
@@ -881,7 +881,7 @@ Array [
           "turnovers": 0,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 28,
         "biggestLead": 9,
         "blocks": 8,
@@ -930,7 +930,7 @@ Array [
       },
     },
     "ifNecessary": false,
-    "profile": Object {
+    "profile": {
       "arenaLocation": "Indianapolis, IN",
       "arenaName": "Gainbridge Fieldhouse",
       "awayTeamId": "1610612739",
@@ -944,12 +944,12 @@ Array [
       "utcMillis": "1672358400000",
     },
     "seriesText": null,
-    "urls": Array [],
+    "urls": [],
   },
-  Object {
-    "awayTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+  {
+    "awayTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "paul_george",
           "country": "United States",
           "countryEn": "United States",
@@ -972,7 +972,7 @@ Array [
           "schoolType": "College",
           "weight": "99.8 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 6,
           "blocks": 0,
           "defRebs": 4,
@@ -997,15 +997,15 @@ Array [
           "turnovers": 4,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "4",
         "divRank": "1",
         "losses": "16",
         "seriesText": null,
         "wins": "21",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "kawhi_leonard",
           "country": "United States",
           "countryEn": "United States",
@@ -1028,7 +1028,7 @@ Array [
           "schoolType": "College",
           "weight": "102.1 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 3,
           "blocks": 1,
           "defRebs": 8,
@@ -1053,7 +1053,7 @@ Array [
           "turnovers": 3,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "LAC",
         "city": "LA",
         "cityEn": "LA",
@@ -1069,8 +1069,8 @@ Array [
         "name": "Clippers",
         "nameEn": "Clippers",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "ivica_zubac",
           "country": "Croatia",
           "countryEn": "Croatia",
@@ -1093,7 +1093,7 @@ Array [
           "schoolType": "International",
           "weight": "108.9 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 0,
           "blocks": 1,
           "defRebs": 7,
@@ -1118,7 +1118,7 @@ Array [
           "turnovers": 1,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 26,
         "biggestLead": 4,
         "blocks": 4,
@@ -1166,7 +1166,7 @@ Array [
         "turnovers": 13,
       },
     },
-    "boxscore": Object {
+    "boxscore": {
       "attendance": "0",
       "awayScore": 110,
       "gameLength": "132",
@@ -1181,10 +1181,10 @@ Array [
       "statusDesc": "Final",
       "ties": "6",
     },
-    "broadcasters": Array [],
-    "homeTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+    "broadcasters": [],
+    "homeTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "marcus_smart",
           "country": "United States",
           "countryEn": "United States",
@@ -1207,7 +1207,7 @@ Array [
           "schoolType": "College",
           "weight": "99.8 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 9,
           "blocks": 1,
           "defRebs": 3,
@@ -1232,15 +1232,15 @@ Array [
           "turnovers": 3,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "1",
         "divRank": "1",
         "losses": "10",
         "seriesText": null,
         "wins": "26",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "jayson_tatum",
           "country": "United States",
           "countryEn": "United States",
@@ -1263,7 +1263,7 @@ Array [
           "schoolType": "College",
           "weight": "95.3 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 1,
           "blocks": 1,
           "defRebs": 10,
@@ -1288,7 +1288,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "BOS",
         "city": "Boston",
         "cityEn": "Boston",
@@ -1304,8 +1304,8 @@ Array [
         "name": "Celtics",
         "nameEn": "Celtics",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "jayson_tatum",
           "country": "United States",
           "countryEn": "United States",
@@ -1328,7 +1328,7 @@ Array [
           "schoolType": "College",
           "weight": "95.3 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 1,
           "blocks": 1,
           "defRebs": 10,
@@ -1353,7 +1353,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 22,
         "biggestLead": 13,
         "blocks": 7,
@@ -1402,7 +1402,7 @@ Array [
       },
     },
     "ifNecessary": false,
-    "profile": Object {
+    "profile": {
       "arenaLocation": "Boston, MA",
       "arenaName": "TD Garden",
       "awayTeamId": "1610612746",
@@ -1416,12 +1416,12 @@ Array [
       "utcMillis": "1672360200000",
     },
     "seriesText": null,
-    "urls": Array [],
+    "urls": [],
   },
-  Object {
-    "awayTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+  {
+    "awayTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "ja_morant",
           "country": "United States",
           "countryEn": "United States",
@@ -1444,7 +1444,7 @@ Array [
           "schoolType": "College",
           "weight": "78.9 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 17,
           "blocks": 1,
           "defRebs": 4,
@@ -1469,15 +1469,15 @@ Array [
           "turnovers": 3,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "3",
         "divRank": "2",
         "losses": "13",
         "seriesText": null,
         "wins": "21",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "dillon_brooks",
           "country": "Canada",
           "countryEn": "Canada",
@@ -1500,7 +1500,7 @@ Array [
           "schoolType": "College",
           "weight": "102.1 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 6,
           "blocks": 0,
           "defRebs": 2,
@@ -1525,7 +1525,7 @@ Array [
           "turnovers": 0,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "MEM",
         "city": "Memphis",
         "cityEn": "Memphis",
@@ -1541,8 +1541,8 @@ Array [
         "name": "Grizzlies",
         "nameEn": "Grizzlies",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "steven_adams",
           "country": "New Zealand",
           "countryEn": "New Zealand",
@@ -1565,7 +1565,7 @@ Array [
           "schoolType": "College",
           "weight": "120.2 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 3,
           "blocks": 0,
           "defRebs": 9,
@@ -1590,7 +1590,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 37,
         "biggestLead": 23,
         "blocks": 4,
@@ -1638,7 +1638,7 @@ Array [
         "turnovers": 16,
       },
     },
-    "boxscore": Object {
+    "boxscore": {
       "attendance": "19,800",
       "awayScore": 119,
       "gameLength": "132",
@@ -1653,10 +1653,10 @@ Array [
       "statusDesc": "Final",
       "ties": "0",
     },
-    "broadcasters": Array [],
-    "homeTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+    "broadcasters": [],
+    "homeTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "malachi_flynn",
           "country": "United States",
           "countryEn": "United States",
@@ -1679,7 +1679,7 @@ Array [
           "schoolType": "College",
           "weight": "79.4 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 5,
           "blocks": 0,
           "defRebs": 6,
@@ -1704,15 +1704,15 @@ Array [
           "turnovers": 0,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "11",
         "divRank": "5",
         "losses": "20",
         "seriesText": null,
         "wins": "15",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "pascal_siakam",
           "country": "Cameroon",
           "countryEn": "Cameroon",
@@ -1735,7 +1735,7 @@ Array [
           "schoolType": "College",
           "weight": "104.3 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 4,
           "blocks": 1,
           "defRebs": 8,
@@ -1760,7 +1760,7 @@ Array [
           "turnovers": 1,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "TOR",
         "city": "Toronto",
         "cityEn": "Toronto",
@@ -1776,8 +1776,8 @@ Array [
         "name": "Raptors",
         "nameEn": "Raptors",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "scottie_barnes",
           "country": "United States",
           "countryEn": "United States",
@@ -1800,7 +1800,7 @@ Array [
           "schoolType": "College",
           "weight": "102.1 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 4,
           "blocks": 1,
           "defRebs": 3,
@@ -1825,7 +1825,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 21,
         "biggestLead": 2,
         "blocks": 7,
@@ -1874,7 +1874,7 @@ Array [
       },
     },
     "ifNecessary": false,
-    "profile": Object {
+    "profile": {
       "arenaLocation": "Toronto, ON",
       "arenaName": "Scotiabank Arena",
       "awayTeamId": "1610612763",
@@ -1888,12 +1888,12 @@ Array [
       "utcMillis": "1672360200000",
     },
     "seriesText": null,
-    "urls": Array [],
+    "urls": [],
   },
-  Object {
-    "awayTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+  {
+    "awayTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "immanuel_quickley",
           "country": "United States",
           "countryEn": "United States",
@@ -1916,7 +1916,7 @@ Array [
           "schoolType": "College",
           "weight": "86.2 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 7,
           "blocks": 0,
           "defRebs": 4,
@@ -1941,15 +1941,15 @@ Array [
           "turnovers": 1,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "8",
         "divRank": "4",
         "losses": "17",
         "seriesText": null,
         "wins": "18",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "julius_randle",
           "country": "United States",
           "countryEn": "United States",
@@ -1972,7 +1972,7 @@ Array [
           "schoolType": "College",
           "weight": "113.4 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 6,
           "blocks": 0,
           "defRebs": 8,
@@ -1997,7 +1997,7 @@ Array [
           "turnovers": 3,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "NYK",
         "city": "New York",
         "cityEn": "New York",
@@ -2013,8 +2013,8 @@ Array [
         "name": "Knicks",
         "nameEn": "Knicks",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "julius_randle",
           "country": "United States",
           "countryEn": "United States",
@@ -2037,7 +2037,7 @@ Array [
           "schoolType": "College",
           "weight": "113.4 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 6,
           "blocks": 0,
           "defRebs": 8,
@@ -2062,7 +2062,7 @@ Array [
           "turnovers": 3,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 18,
         "biggestLead": 5,
         "blocks": 1,
@@ -2110,7 +2110,7 @@ Array [
         "turnovers": 12,
       },
     },
-    "boxscore": Object {
+    "boxscore": {
       "attendance": "18,354",
       "awayScore": 101,
       "gameLength": "125",
@@ -2125,10 +2125,10 @@ Array [
       "statusDesc": "4th",
       "ties": "5",
     },
-    "broadcasters": Array [],
-    "homeTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+    "broadcasters": [],
+    "homeTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "tre_jones",
           "country": "United States",
           "countryEn": "United States",
@@ -2151,7 +2151,7 @@ Array [
           "schoolType": "College",
           "weight": "83.9 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 5,
           "blocks": 1,
           "defRebs": 5,
@@ -2176,15 +2176,15 @@ Array [
           "turnovers": 2,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "14",
         "divRank": "4",
         "losses": "23",
         "seriesText": null,
         "wins": "11",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "keldon_johnson",
           "country": "United States",
           "countryEn": "United States",
@@ -2207,7 +2207,7 @@ Array [
           "schoolType": "College",
           "weight": "99.8 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 1,
           "blocks": 0,
           "defRebs": 2,
@@ -2232,7 +2232,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "SAS",
         "city": "San Antonio",
         "cityEn": "San Antonio",
@@ -2248,8 +2248,8 @@ Array [
         "name": "Spurs",
         "nameEn": "Spurs",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "jakob_poeltl",
           "country": "Austria",
           "countryEn": "Austria",
@@ -2272,7 +2272,7 @@ Array [
           "schoolType": "College",
           "weight": "111.1 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 2,
           "blocks": 2,
           "defRebs": 7,
@@ -2297,7 +2297,7 @@ Array [
           "turnovers": 0,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 25,
         "biggestLead": 17,
         "blocks": 5,
@@ -2346,7 +2346,7 @@ Array [
       },
     },
     "ifNecessary": false,
-    "profile": Object {
+    "profile": {
       "arenaLocation": "San Antonio, TX",
       "arenaName": "AT&T Center",
       "awayTeamId": "1610612752",
@@ -2360,12 +2360,12 @@ Array [
       "utcMillis": "1672362000000",
     },
     "seriesText": null,
-    "urls": Array [],
+    "urls": [],
   },
-  Object {
-    "awayTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+  {
+    "awayTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "kevin_porter_jr",
           "country": "United States",
           "countryEn": "United States",
@@ -2388,7 +2388,7 @@ Array [
           "schoolType": "College",
           "weight": "92.1 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 6,
           "blocks": 0,
           "defRebs": 2,
@@ -2413,15 +2413,15 @@ Array [
           "turnovers": 3,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "15",
         "divRank": "5",
         "losses": "24",
         "seriesText": null,
         "wins": "10",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "kevin_porter_jr",
           "country": "United States",
           "countryEn": "United States",
@@ -2444,7 +2444,7 @@ Array [
           "schoolType": "College",
           "weight": "92.1 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 6,
           "blocks": 0,
           "defRebs": 2,
@@ -2469,7 +2469,7 @@ Array [
           "turnovers": 3,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "HOU",
         "city": "Houston",
         "cityEn": "Houston",
@@ -2485,8 +2485,8 @@ Array [
         "name": "Rockets",
         "nameEn": "Rockets",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "usman_garuba",
           "country": "Spain",
           "countryEn": "Spain",
@@ -2509,7 +2509,7 @@ Array [
           "schoolType": "International",
           "weight": "103.9 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 1,
           "blocks": 0,
           "defRebs": 4,
@@ -2534,7 +2534,7 @@ Array [
           "turnovers": 0,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 14,
         "biggestLead": 2,
         "blocks": 0,
@@ -2582,7 +2582,7 @@ Array [
         "turnovers": 9,
       },
     },
-    "boxscore": Object {
+    "boxscore": {
       "attendance": "0",
       "awayScore": 71,
       "gameLength": "95",
@@ -2597,10 +2597,10 @@ Array [
       "statusDesc": "3rd",
       "ties": "1",
     },
-    "broadcasters": Array [],
-    "homeTeam": Object {
-      "assistGameLeader": Object {
-        "profile": Object {
+    "broadcasters": [],
+    "homeTeam": {
+      "assistGameLeader": {
+        "profile": {
           "code": "luka_don",
           "country": "Slovenia",
           "countryEn": "Slovenia",
@@ -2623,7 +2623,7 @@ Array [
           "schoolType": "International",
           "weight": "104.3 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 11,
           "blocks": 2,
           "defRebs": 10,
@@ -2648,15 +2648,15 @@ Array [
           "turnovers": 2,
         },
       },
-      "matchup": Object {
+      "matchup": {
         "confRank": "7",
         "divRank": "3",
         "losses": "16",
         "seriesText": null,
         "wins": "19",
       },
-      "pointGameLeader": Object {
-        "profile": Object {
+      "pointGameLeader": {
+        "profile": {
           "code": "luka_don",
           "country": "Slovenia",
           "countryEn": "Slovenia",
@@ -2679,7 +2679,7 @@ Array [
           "schoolType": "International",
           "weight": "104.3 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 11,
           "blocks": 2,
           "defRebs": 10,
@@ -2704,7 +2704,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "profile": Object {
+      "profile": {
         "abbr": "DAL",
         "city": "Dallas",
         "cityEn": "Dallas",
@@ -2720,8 +2720,8 @@ Array [
         "name": "Mavericks",
         "nameEn": "Mavericks",
       },
-      "reboundGameLeader": Object {
-        "profile": Object {
+      "reboundGameLeader": {
+        "profile": {
           "code": "luka_don",
           "country": "Slovenia",
           "countryEn": "Slovenia",
@@ -2744,7 +2744,7 @@ Array [
           "schoolType": "International",
           "weight": "104.3 kg",
         },
-        "statTotal": Object {
+        "statTotal": {
           "assists": 11,
           "blocks": 2,
           "defRebs": 10,
@@ -2769,7 +2769,7 @@ Array [
           "turnovers": 2,
         },
       },
-      "score": Object {
+      "score": {
         "assists": 21,
         "biggestLead": 22,
         "blocks": 7,
@@ -2818,7 +2818,7 @@ Array [
       },
     },
     "ifNecessary": false,
-    "profile": Object {
+    "profile": {
       "arenaLocation": "Dallas, TX",
       "arenaName": "American Airlines Center",
       "awayTeamId": "1610612745",
@@ -2832,7 +2832,7 @@ Array [
       "utcMillis": "1672363800000",
     },
     "seriesText": null,
-    "urls": Array [],
+    "urls": [],
   },
 ]
 `;
