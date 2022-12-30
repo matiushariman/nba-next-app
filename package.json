@@ -6,6 +6,7 @@
     "start": "nx serve nba-client --prod",
     "dev": "nx serve nba-client",
     "build": "nx build nba-client --prod",
+    "lint:all": "nx run-many --target=lint --exclude test-utils ui-test-utils",
     "test:all": "nx run-many --target=test --exclude test-utils ui-test-utils"
   },
   "private": true,

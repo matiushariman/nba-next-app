@@ -1,0 +1,157 @@
+name: Integration CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/**/*.tsx?'
+      - 'libs/**/*.ts'
+      - '.github/workflows/integration-ci.yml'
+      - '.github/workflows/reusable-setup.yml'
+
+jobs:
+  setup:
+    name: Setup dependencies
+    uses: ./.github/workflows/reusable-setup.yml
+  lint:
+    name: Run lint
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock.json') }}
+            ${{ runner.os }}-modules-${{ env.cache-name }}-
+      - name: Run lint
+        run: yarn lint:all
+  test:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock.json') }}
+            ${{ runner.os }}-modules-${{ env.cache-name }}-
+      - name: Run unit test
+        run: yarn test:all
+      - name: Upload coverage as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: coverage/**
+  upload-api-client-coverage:
+    name: Upload API Client coverage to codecov
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Download coverage from artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage
+          path: coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: '**/coverage/libs/api-client/coverage-final.json'
+          flags: api-client
+  upload-date-utils-coverage:
+    name: Upload date-utils coverage to codecov
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Download coverage from artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage
+          path: coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: '**/coverage/libs/date-utils/coverage-final.json'
+          flags: date-utils
+  upload-formatting-utils-coverage:
+    name: Upload formatting-utils coverage to codecov
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Download coverage from artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage
+          path: coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: '**/coverage/libs/formatting-utils/coverage-final.json'
+          flags: formatting-utils
+  upload-ui-coverage:
+    name: Upload ui coverage to codecov
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Download coverage from artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage
+          path: coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: '**/coverage/libs/ui/coverage-final.json'
+          flags: ui
+  upload-nba-client-coverage:
+    name: Upload nba-client coverage to codecov
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Download coverage from artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage
+          path: coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: '**/coverage/apps/nba-client/coverage-final.json'
+          flags: nba-client
+
