@@ -2,7 +2,12 @@
   "name": "nba-app",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve nba-client --prod",
+    "dev": "nx serve nba-client",
+    "build": "nx build nba-client --prod",
+    "test:all": "nx run-many --target=test --exclude test-utils ui-test-utils"
+  },
   "private": true,
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
