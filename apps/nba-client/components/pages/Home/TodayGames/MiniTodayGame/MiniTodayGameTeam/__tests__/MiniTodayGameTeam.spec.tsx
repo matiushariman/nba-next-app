@@ -1,7 +1,9 @@
 import { render, screen } from '@nba-app/test-utils';
 import { MiniTodayGameTeam } from '../MiniTodayGameTeam';
 
-describe('MiniTodayGameTeam', () => {
+import type { SuiteAPI } from 'vitest';
+
+(describe as SuiteAPI).concurrent('MiniTodayGameTeam', () => {
   it('should render team record if game has not started (status 1)', () => {
     render(
       <MiniTodayGameTeam

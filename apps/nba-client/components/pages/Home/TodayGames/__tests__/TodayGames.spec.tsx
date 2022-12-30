@@ -3,12 +3,11 @@ import userEvent from '@testing-library/user-event';
 
 import { TodayGames } from '../TodayGames';
 
-describe('TodayGames', () => {
-  beforeEach(() => {
-    render(<TodayGames games={[]} />);
-  });
+import type { SuiteAPI } from 'vitest';
 
+(describe as SuiteAPI)('TodayGames', () => {
   it('should allow the user to minimize scoreboard', async () => {
+    render(<TodayGames games={[]} />);
     expect(screen.getByLabelText(/expanded scoreboard/i)).toBeDefined();
 
     await userEvent.click(
@@ -19,6 +18,7 @@ describe('TodayGames', () => {
   });
 
   it('should allow the user to select game date', async () => {
+    render(<TodayGames games={[]} />);
     await userEvent.click(screen.getByRole('button', { name: /choose date/i }));
 
     expect(screen.getByRole('dialog')).toBeDefined();

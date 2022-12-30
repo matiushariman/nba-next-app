@@ -1,7 +1,9 @@
 import { render, screen } from '@nba-app/test-utils';
 import { TodayGameScore } from '../TodayGameScore';
 
-describe('TodayGameScore', () => {
+import type { SuiteAPI } from 'vitest';
+
+(describe as SuiteAPI)('TodayGameScore', () => {
   it('should render nothing if game has not started (status 1)', () => {
     const { container } = render(
       <TodayGameScore awayScore={0} homeScore={0} status="1" />

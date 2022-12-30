@@ -1,7 +1,9 @@
 import { render, screen } from '@nba-app/test-utils';
 import { TodayGameStatus } from '../TodayGameStatus';
 
-describe('TodayGameStatus', () => {
+import type { SuiteAPI } from 'vitest';
+
+(describe as SuiteAPI).concurrent('TodayGameStatus', () => {
   it('should render game time if game status is 1 (PRE GAME)', () => {
     render(
       <TodayGameStatus
