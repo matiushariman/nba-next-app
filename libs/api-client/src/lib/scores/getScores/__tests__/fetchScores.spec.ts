@@ -1,6 +1,6 @@
 import { fetchScores } from '../fetchScores';
 
-describe(fetchScores, () => {
+describe('fetchScores', () => {
   it('should return only games data', async () => {
     expect(
       await fetchScores('http://localhost/api/scores', {
