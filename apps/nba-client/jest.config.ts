@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 export default {
   displayName: 'nba-client',
   preset: '../../jest.preset.js',
