@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 
 export const formatDate = (
   date: dayjs.Dayjs | Date | string | number | null,
