@@ -2,7 +2,7 @@ import { render, screen } from '@nba-app/ui-test-utils';
 
 import { TeamLogo } from '../TeamLogo';
 
-describe('TeamLogo', () => {
+describe.concurrent('TeamLogo', () => {
   it('should render L logo when using light theme', () => {
     render(<TeamLogo id="1" name="Celtics" />);
     expect(screen.getByRole('img')).toHaveAttribute(
