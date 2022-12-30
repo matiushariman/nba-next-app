@@ -2,7 +2,7 @@ import { FC, ReactElement, ReactNode, useMemo, useState } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { PaletteMode } from '@mui/material';
-import { ColorModeContext } from '@nba-app/ui';
+import { ColorModeContext } from '@nba-app/ui-old';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { SWRConfig } from 'swr';

@@ -1,7 +1,7 @@
 {
-  "name": "ui",
+  "name": "ui-old",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ui/src",
+  "sourceRoot": "libs/ui-old/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,14 +9,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ui/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/ui-old/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ui/jest.config.ts",
+        "jestConfig": "libs/ui-old/jest.config.ts",
         "passWithNoTests": true
       }
     }

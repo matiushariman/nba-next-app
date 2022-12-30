@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { ColorModeContext } from '@nba-app/ui';
+import { ColorModeContext } from '@nba-app/ui-old';
 
 import type { AllTheProvidersProps } from './AllTheProviders.types';
 
