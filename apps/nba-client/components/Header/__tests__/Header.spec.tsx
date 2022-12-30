@@ -1,4 +1,4 @@
-import { render, screen } from '@nba-app/test-utils-old';
+import { render, screen } from '@nba-app/test-utils';
 import userEvent from '@testing-library/user-event';
 
 import { Header } from '../Header';

@@ -1,4 +1,4 @@
-import { render, screen } from '@nba-app/test-utils-old';
+import { render, screen } from '@nba-app/test-utils';
 import { MiniTodayGame } from '../MiniTodayGame';
 
 describe(MiniTodayGame, () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@nba-app/test-utils-old';
+import { render } from '@nba-app/test-utils';
 
 import Index from '../pages/index';
 
