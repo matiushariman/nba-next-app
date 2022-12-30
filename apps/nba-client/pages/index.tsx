@@ -6,7 +6,7 @@ import {
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Theme } from '@mui/material/styles';
-import { formatDate } from '@nba-app/date-utils';
+import { formatDate } from '@nba-app/date-utils-old';
 
 import { TodayGames } from '../components/pages/Home';
 

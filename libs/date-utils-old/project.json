@@ -1,31 +1,31 @@
 {
-  "name": "date-utils",
+  "name": "date-utils-old",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/date-utils/src",
+  "sourceRoot": "libs/date-utils-old/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/date-utils",
-        "main": "libs/date-utils/src/index.ts",
-        "tsConfig": "libs/date-utils/tsconfig.lib.json",
-        "assets": ["libs/date-utils/*.md"]
+        "outputPath": "dist/libs/date-utils-old",
+        "main": "libs/date-utils-old/src/index.ts",
+        "tsConfig": "libs/date-utils-old/tsconfig.lib.json",
+        "assets": ["libs/date-utils-old/*.md"]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/date-utils/**/*.ts"]
+        "lintFilePatterns": ["libs/date-utils-old/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/date-utils/jest.config.ts",
+        "jestConfig": "libs/date-utils-old/jest.config.ts",
         "passWithNoTests": true
       }
     }

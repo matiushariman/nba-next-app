@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'date-utils',
+  displayName: 'date-utils-old',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,7 +11,7 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/date-utils',
+  coverageDirectory: '../../coverage/libs/date-utils-old',
   collectCoverage: true,
   coverageReporters: ['json', ['text', { skipFull: true }]],
 };

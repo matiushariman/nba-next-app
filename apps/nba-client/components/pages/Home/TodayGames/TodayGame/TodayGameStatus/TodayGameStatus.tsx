@@ -1,4 +1,4 @@
-import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils';
+import { convertESTtoLocalTime, formatDate } from '@nba-app/date-utils-old';
 import Typography from '@mui/material/Typography';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import { displayLiveGameStatusText } from '@nba-app/formatting-utils';

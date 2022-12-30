@@ -9,7 +9,7 @@ import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
 import { useEffect, useState } from 'react';
 import { useGetScoresWithSWR } from '@nba-app/api-client';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { formatDate } from '@nba-app/date-utils';
+import { formatDate } from '@nba-app/date-utils-old';
 
 import { Drawer } from './TodayGames.styles';
 import { TodayGame } from './TodayGame';
