@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Header } from '../components/Header';
 import { AllTheProviders } from '../AllTheProviders';
 
 export default function CustomApp({ Component, pageProps }: AppProps) {
@@ -12,7 +11,6 @@ export default function CustomApp({ Component, pageProps }: AppProps) {
       </Head>
       <AllTheProviders>
         <main className="app">
-          <Header />
           <Component {...pageProps} />
         </main>
       </AllTheProviders>

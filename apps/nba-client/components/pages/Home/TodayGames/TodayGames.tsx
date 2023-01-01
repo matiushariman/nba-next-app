@@ -33,18 +33,19 @@ export const TodayGames = ({ games }: TodayGamesProps) => {
       anchor="left"
       aria-label={open ? 'Expanded scoreboard' : 'Mini scoreboard'}
     >
-      <Toolbar />
+      <Toolbar sx={{ justifyContent: 'flex-end' }}>
+        <IconButton
+          color="primary"
+          aria-label={open ? 'minimize scoreboard' : 'expand scoreboard'}
+          onClick={() => {
+            setOpen((prevOpen) => !prevOpen);
+          }}
+        >
+          {open ? <ChevronLeftOutlinedIcon /> : <MenuIcon />}
+        </IconButton>
+      </Toolbar>
       <List>
-        <ListItem sx={{ position: 'relative' }}>
-          <IconButton
-            color="primary"
-            aria-label={open ? 'minimize scoreboard' : 'expand scoreboard'}
-            onClick={() => {
-              setOpen((prevOpen) => !prevOpen);
-            }}
-          >
-            {open ? <ChevronLeftOutlinedIcon /> : <MenuIcon />}
-          </IconButton>
+        <ListItem>
           <ListItemText
             primaryTypographyProps={{
               sx: {
