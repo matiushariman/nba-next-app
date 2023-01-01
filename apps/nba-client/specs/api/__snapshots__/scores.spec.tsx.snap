@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`useFetchScoresWithSWR should return followed artists response 1`] = `
+exports[`useFetchScoresWithSWR should return scores response 1`] = `
 Array [
   Object {
     "awayTeam": Object {
