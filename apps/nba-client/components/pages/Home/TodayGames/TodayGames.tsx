@@ -9,11 +9,9 @@ import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
 import { useState } from 'react';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { formatDate } from '@nba-app/date-utils';
-
+import { TodayGamesList } from './TodayGamesList';
 import { Drawer } from './TodayGames.styles';
-import { TodayGame } from './TodayGame';
-import { MiniTodayGame } from './MiniTodayGame';
-import { GamesProvider, GamesConsumer } from '../../../../context/GamesContext';
+import { GamesProvider } from '../../../../context/GamesContext';
 
 import type { Dayjs } from 'dayjs';
 import type { TodayGamesProps } from './TodayGames.types';
@@ -78,19 +76,7 @@ export const TodayGames = ({ games }: TodayGamesProps) => {
             games,
           }}
         >
-          <GamesConsumer>
-            {({ games: todayGames }) =>
-              todayGames.map((game) => (
-                <ListItem key={game.profile.gameId} disablePadding={!open}>
-                  {open ? (
-                    <TodayGame game={game} />
-                  ) : (
-                    <MiniTodayGame game={game} />
-                  )}
-                </ListItem>
-              ))
-            }
-          </GamesConsumer>
+          <TodayGamesList isExpandedMode={open} />
         </GamesProvider>
       </List>
     </Drawer>

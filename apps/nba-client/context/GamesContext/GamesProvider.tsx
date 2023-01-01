@@ -12,7 +12,7 @@ export const GamesProvider = ({
   initialValues,
 }: GamesProviderProps) => {
   const [todayGames, setTodayGames] = useState(initialValues?.games ?? []);
-  const { data: newGames } = useFetchScoresWithSWR({
+  const { data: newGames, isLoading } = useFetchScoresWithSWR({
     data: {
       gameDate: formatDate(gameDate, 'YYYY-MM-DD'),
     },
@@ -30,8 +30,9 @@ export const GamesProvider = ({
   const memoizedValue = useMemo<GamesContextProps>(
     () => ({
       games: todayGames,
+      isLoading,
     }),
-    [todayGames]
+    [todayGames, isLoading]
   );
 
   return (
