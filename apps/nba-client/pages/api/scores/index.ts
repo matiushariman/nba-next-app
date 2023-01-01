@@ -7,7 +7,7 @@ import {
 import useSWR, { SWRConfiguration } from 'swr';
 import axios from 'axios';
 
-export interface UseFetchScoresWithSWR {
+interface UseFetchScoresWithSWR {
   readonly data: GetScoresReq;
   config?: SWRConfiguration;
 }
