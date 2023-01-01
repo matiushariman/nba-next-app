@@ -1,8 +1,4 @@
-import {
-  fetchScores,
-  GetScoresDateGame,
-  GET_SCORES_API_URL,
-} from '@nba-app/api-client';
+import { fetchScores, GetScoresDateGame } from '@nba-app/api-client';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Theme } from '@mui/material/styles';
@@ -23,12 +19,9 @@ export default function Home({
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const games = await fetchScores(
-    `${process.env['NX_HOST_BASE_URL']}${GET_SCORES_API_URL}`,
-    {
-      gameDate: formatDate(new Date()),
-    }
-  );
+  const games = await fetchScores({
+    gameDate: formatDate(new Date()),
+  });
 
   return {
     props: {

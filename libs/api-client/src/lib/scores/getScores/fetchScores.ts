@@ -1,11 +1,11 @@
+import axios from 'axios';
+
 import type { GetScoresBaseRes, GetScoresReq } from './getScores.types';
 
-export const fetchScores = async (url: string, data: GetScoresReq) => {
-  const res = await fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(data),
-  });
-  const scores: GetScoresBaseRes = await res.json();
+export const fetchScores = async ({ gameDate }: GetScoresReq) => {
+  const { data } = await axios.get<GetScoresBaseRes>(
+    `https://sg.global.nba.com/stats2/scores/daily.json?gameDate=${gameDate}`
+  );
 
-  return scores.payload.date?.games ?? [];
+  return data.payload.date?.games ?? [];
 };

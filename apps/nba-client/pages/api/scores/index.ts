@@ -1,18 +1,37 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import {
+  fetchScores,
+  GetScoresDateGame,
+  GetScoresReq,
+} from '@nba-app/api-client';
+import useSWR, { SWRConfiguration } from 'swr';
 import axios from 'axios';
 
-import type { GetScoresReq, GetScoresBaseRes } from '@nba-app/api-client';
+export interface UseFetchScoresWithSWR {
+  readonly data: GetScoresReq;
+  config?: SWRConfiguration;
+}
+
+export const useFetchScoresWithSWR = ({
+  data,
+  config,
+}: UseFetchScoresWithSWR) => {
+  return useSWR<GetScoresDateGame[]>(
+    ['/api/scores', data],
+    ([url, data]) =>
+      axios.post<GetScoresDateGame[]>(url, data).then((res) => res.data),
+    config
+  );
+};
 
 export default async function scoresHandler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   if (req.method === 'POST') {
-    const { gameDate } = JSON.parse(req.body) as GetScoresReq;
+    const { gameDate } = req.body as GetScoresReq;
 
-    const { data } = await axios.get<GetScoresBaseRes>(
-      `https://sg.global.nba.com/stats2/scores/daily.json?gameDate=${gameDate}`
-    );
+    const data = await fetchScores({ gameDate });
 
     res.status(200).send(data);
 

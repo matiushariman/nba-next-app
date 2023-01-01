@@ -7,13 +7,13 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
 import { useEffect, useState } from 'react';
-import { useGetScoresWithSWR } from '@nba-app/api-client';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { formatDate } from '@nba-app/date-utils';
 
 import { Drawer } from './TodayGames.styles';
 import { TodayGame } from './TodayGame';
 import { MiniTodayGame } from './MiniTodayGame';
+import { useFetchScoresWithSWR } from '../../../../pages/api/scores';
 
 import type { Dayjs } from 'dayjs';
 import type { TodayGamesProps } from './TodayGames.types';
@@ -22,7 +22,7 @@ export const TodayGames = ({ games }: TodayGamesProps) => {
   const [selectedDate, setSelectedDate] = useState<Dayjs | Date>(new Date());
   const [todayGames, setTodayGames] = useState(games);
   const [open, setOpen] = useState(true);
-  const { data } = useGetScoresWithSWR({
+  const { data } = useFetchScoresWithSWR({
     data: {
       gameDate: formatDate(selectedDate, 'YYYY-MM-DD'),
     },
