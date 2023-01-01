@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useContext } from 'react';
 import { formatDate } from '@nba-app/date-utils';
 
 import { GamesContext } from './GamesContext';
@@ -42,3 +42,7 @@ export const GamesProvider = ({
 };
 
 export const GamesConsumer = GamesContext.Consumer;
+
+export const useGamesContext = () => {
+  return useContext(GamesContext);
+};

@@ -27,7 +27,7 @@ export default function Home({
         <Header />
         {!isDesktopView && (
           <Suspense fallback={null}>
-            <MobileTodayGames />
+            <MobileTodayGames games={games} />
           </Suspense>
         )}
       </Box>
