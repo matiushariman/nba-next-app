@@ -46,32 +46,31 @@ export const TodayGames = ({ games }: TodayGamesProps) => {
       </Toolbar>
       <List>
         <ListItem>
-          <ListItemText
-            primaryTypographyProps={{
-              sx: {
-                fontWeight: 'bold',
-                textAlign: 'center',
-              },
-            }}
-            primary={
-              open ? (
-                <DesktopDatePicker
-                  inputFormat="ddd, MMM DD"
-                  value={selectedDate}
-                  onChange={handleChange}
-                  disableMaskedInput
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      inputProps={{ ...params.inputProps, readOnly: true }}
-                    />
-                  )}
+          {open ? (
+            <DesktopDatePicker
+              inputFormat="ddd, MMM DD"
+              value={selectedDate}
+              onChange={handleChange}
+              disableMaskedInput
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  inputProps={{ ...params.inputProps, readOnly: true }}
+                  fullWidth
                 />
-              ) : (
-                formatDate(selectedDate, 'ddd, MMM DD')
-              )
-            }
-          />
+              )}
+            />
+          ) : (
+            <ListItemText
+              primaryTypographyProps={{
+                sx: {
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                },
+              }}
+              primary={formatDate(selectedDate, 'ddd, MMM DD')}
+            />
+          )}
         </ListItem>
         <GamesProvider
           gameDate={selectedDate}
