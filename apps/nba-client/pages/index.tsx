@@ -1,9 +1,7 @@
 import { fetchScores, GetScoresDateGame } from '@nba-app/api-client';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { Theme } from '@mui/material/styles';
 import { formatDate } from '@nba-app/date-utils';
-
+import { useDesktopView } from '@nba-app/ui';
 import { TodayGames } from '../components/pages/Home';
 
 interface HomeProps {
@@ -13,9 +11,9 @@ interface HomeProps {
 export default function Home({
   games,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
+  const isDesktopView = useDesktopView();
 
-  return matches && <TodayGames games={games} />;
+  return isDesktopView && <TodayGames games={games} />;
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
