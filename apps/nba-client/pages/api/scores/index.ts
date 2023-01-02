@@ -10,17 +10,14 @@ import axios from 'axios';
 interface UseFetchScoresWithSWR {
   readonly data: GetScoresReq;
   readonly config?: SWRConfiguration;
-
-  readonly shouldFetch?: boolean;
 }
 
 export const useFetchScoresWithSWR = ({
   data,
   config,
-  shouldFetch = true,
 }: UseFetchScoresWithSWR) => {
   return useSWR<GetScoresDateGame[]>(
-    [shouldFetch ? '/api/scores' : null, data],
+    ['/api/scores', data],
     ([url, data]) =>
       axios.post<GetScoresDateGame[]>(url, data).then((res) => res.data),
     config
