@@ -21,7 +21,15 @@ const MobileTodayGames = ({ games }: MobileTodayGamesProps) => {
     <Paper>
       <GamesProvider gameDate={selectedDate} initialValues={{ games }}>
         <Box sx={{ display: 'flex', position: 'relative', height: 89 }}>
-          <Box sx={{ width: 160, p: 2, borderRight: '1px solid #ddd' }}>
+          <Box
+            sx={(theme) => ({
+              width: 160,
+              p: 2,
+              borderRight: `1px solid ${theme.palette.divider}`,
+              display: 'flex',
+              alignItems: 'center',
+            })}
+          >
             <MobileDatePicker
               inputFormat="ddd, MMM DD"
               value={selectedDate}
@@ -37,7 +45,15 @@ const MobileTodayGames = ({ games }: MobileTodayGamesProps) => {
               )}
             />
           </Box>
-          <MobileTodayGamesList />
+          <Box
+            sx={{
+              overflowX: 'auto',
+              whiteSpace: 'nowrap',
+              maxWidth: 'calc(100vw - 175px)',
+            }}
+          >
+            <MobileTodayGamesList />
+          </Box>
         </Box>
       </GamesProvider>
     </Paper>
