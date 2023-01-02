@@ -2,7 +2,8 @@
  * Enable `@testing-library/jest-dom` matchers such as toHaveTextContent or toHaveAttribute.
  */
 import '@testing-library/jest-dom';
-import { server } from './__mocks__/server';
+
+import { server } from './src/mocks/server';
 
 beforeAll(() => {
   // Enable the mocking in tests.

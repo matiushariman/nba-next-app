@@ -1,3 +1,7 @@
+import type { League } from '../../../types/League.types';
+import type { Season } from '../../../types/Season.types';
+import type { TeamProfile } from '../../../types/Team.types';
+
 export interface GetScoresDateGameProfile {
   readonly arenaLocation: string;
   readonly arenaName: string;
@@ -28,22 +32,7 @@ export interface GetScoresDateGameBoxscore {
   readonly ties: string;
 }
 
-export interface GetScoresDateGameTeamProfile {
-  readonly abbr: string;
-  readonly city: string;
-  readonly cityEn: string;
-  readonly code: string;
-  readonly conference: string;
-  readonly displayAbbr: string;
-  readonly displayConference: string;
-  readonly division: string;
-  readonly id: string;
-  readonly isAllStarTeam: boolean;
-  readonly isLeagueTeam: boolean;
-  readonly leagueId: string;
-  readonly name: string;
-  readonly nameEn: string;
-}
+export type GetScoresDateGameTeamProfile = TeamProfile;
 
 export interface GetScoresDateGameTeamMatchup {
   readonly confRank: string;
@@ -182,21 +171,8 @@ export interface GetScoresDate {
 }
 
 export interface GetScoresPayload {
-  readonly league: { readonly id: '00'; readonly name: 'NBA' };
-  readonly season: {
-    readonly isCurrent: string;
-    readonly rosterSeasonType: number;
-    readonly rosterSeasonYear: string;
-    readonly rosterSeasonYearDisplay: string;
-    readonly scheduleSeasonType: number;
-    readonly scheduleSeasonYear: string;
-    readonly scheduleYearDisplay: string;
-    readonly statsSeasonType: number;
-    readonly statsSeasonYear: string;
-    readonly statsSeasonYearDisplay: string;
-    readonly year: string;
-    readonly yearDisplay: string;
-  };
+  readonly league: League;
+  readonly season: Season;
   readonly date: GetScoresDate | null;
   readonly nextAvailableDateMillis: string;
   readonly utcMillis: string;
