@@ -10,6 +10,7 @@ export const GamesProvider = ({
   children,
   gameDate,
   initialValues,
+  shouldFetch,
 }: GamesProviderProps) => {
   const [todayGames, setTodayGames] = useState(initialValues?.games ?? []);
   const { data: newGames, isLoading } = useFetchScoresWithSWR({
@@ -19,6 +20,7 @@ export const GamesProvider = ({
     config: {
       refreshInterval: 30000,
     },
+    shouldFetch,
   });
 
   useEffect(() => {

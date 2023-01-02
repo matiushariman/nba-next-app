@@ -24,6 +24,7 @@ export const TodayGamesList = ({ isExpandedMode }: TodayGamesListProps) => {
 
   return (
     <Stack
+      aria-label="List of games"
       sx={{
         position: 'relative',
         pt: 2,

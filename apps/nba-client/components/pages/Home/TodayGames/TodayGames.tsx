@@ -16,7 +16,7 @@ import { GamesProvider } from '../../../../context/GamesContext';
 import type { Dayjs } from 'dayjs';
 import type { TodayGamesProps } from './TodayGames.types';
 
-export const TodayGames = ({ games }: TodayGamesProps) => {
+export const TodayGames = ({ games, shouldFetch }: TodayGamesProps) => {
   const [selectedDate, setSelectedDate] = useState<Dayjs | Date>(new Date());
   const [open, setOpen] = useState(true);
 
@@ -75,6 +75,7 @@ export const TodayGames = ({ games }: TodayGamesProps) => {
           initialValues={{
             games,
           }}
+          shouldFetch={shouldFetch}
         >
           <TodayGamesList isExpandedMode={open} />
         </GamesProvider>

@@ -8,7 +8,10 @@ import { MobileTodayGameTeam } from './MobileTodayGameTeam';
 import type { MobileTodayGameProps } from './MobileTodayGame.types';
 
 export const MobileTodayGame = ({ game }: MobileTodayGameProps) => (
-  <Box sx={{ display: 'inline-block', width: 140, p: 1, pr: 2, pl: 2 }}>
+  <Box
+    aria-label={`Game between ${game.awayTeam.profile.name} and ${game.homeTeam.profile.name}`}
+    sx={{ display: 'inline-block', width: 140, p: 1, pr: 2, pl: 2 }}
+  >
     <Stack>
       <MobileTodayGameStatus
         status={game.boxscore.status}
