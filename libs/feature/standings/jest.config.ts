@@ -10,4 +10,6 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/feature/standings',
+  setupFilesAfterEnv: ['./jest.setup.ts'],
+  coverageReporters: ['json', ['text', { skipFull: true }]],
 };

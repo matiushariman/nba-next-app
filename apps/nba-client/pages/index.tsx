@@ -1,16 +1,15 @@
-import {
-  fetchScores,
-  GetScoresDateGame,
-  fetchConferenceStandings,
-  FetchConferenceStandingsStandingGroup,
-} from '@nba-app/api-client';
+import { fetchScores, GetScoresDateGame } from '@nba-app/api-client';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { formatDate } from '@nba-app/date-utils';
 import { useDesktopView } from '@nba-app/ui';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { lazy, Suspense, useState, useEffect } from 'react';
-import { Standings } from '@nba-app/feature-standings';
+import {
+  Standings,
+  fetchConferenceStandings,
+  FetchConferenceStandingsStandingGroup,
+} from '@nba-app/feature-standings';
 
 import { TodayGames } from '../components/pages/Home';
 import { Header } from '../components/Header';

@@ -1,6 +1,39 @@
-import type { League } from '../../../types/League.types';
-import type { Season } from '../../../types/Season.types';
-import type { TeamProfile } from '../../../types/Team.types';
+interface League {
+  readonly id: '00';
+  readonly name: 'NBA';
+}
+
+interface TeamProfile {
+  readonly abbr: string;
+  readonly city: string;
+  readonly cityEn: string;
+  readonly code: string;
+  readonly conference: string;
+  readonly displayAbbr: string;
+  readonly displayConference: string;
+  readonly division: string;
+  readonly id: string;
+  readonly isAllStarTeam: boolean;
+  readonly isLeagueTeam: boolean;
+  readonly leagueId: string;
+  readonly name: string;
+  readonly nameEn: string;
+}
+
+interface Season {
+  readonly isCurrent: string;
+  readonly rosterSeasonType: number;
+  readonly rosterSeasonYear: string;
+  readonly rosterSeasonYearDisplay: string;
+  readonly scheduleSeasonType: number;
+  readonly scheduleSeasonYear: string;
+  readonly scheduleYearDisplay: string;
+  readonly statsSeasonType: number;
+  readonly statsSeasonYear: string;
+  readonly statsSeasonYearDisplay: string;
+  readonly year: string;
+  readonly yearDisplay: string;
+}
 
 type FetchConferenceStandingsStandingGroupTeamTeamProfile = TeamProfile;
 
