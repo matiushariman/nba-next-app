@@ -9,7 +9,7 @@ import { Header } from '../components/Header';
 
 interface HomeProps {
   readonly games: GetScoresDateGame[];
-  readonly shouldFetch: boolean;
+  readonly shouldRefetch: boolean;
 }
 
 const MobileTodayGames = lazy(
@@ -18,18 +18,20 @@ const MobileTodayGames = lazy(
 
 export default function Home({
   games,
-  shouldFetch,
+  shouldRefetch,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const isDesktopView = useDesktopView();
 
   return (
     <Box sx={{ display: 'flex' }}>
-      {isDesktopView && <TodayGames games={games} shouldFetch={shouldFetch} />}
+      {isDesktopView && (
+        <TodayGames games={games} shouldRefetch={shouldRefetch} />
+      )}
       <Box sx={{ flexGrow: 1 }}>
         <Header />
         {!isDesktopView && (
           <Suspense fallback={null}>
-            <MobileTodayGames games={games} shouldFetch={shouldFetch} />
+            <MobileTodayGames games={games} shouldRefetch={shouldRefetch} />
           </Suspense>
         )}
       </Box>
@@ -43,12 +45,12 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   });
 
   // returns true if there is a live game
-  const shouldFetch = games.some((game) => game.boxscore.status === '2');
+  const shouldRefetch = games.some((game) => game.boxscore.status === '2');
 
   return {
     props: {
       games,
-      shouldFetch,
+      shouldRefetch,
     },
   };
 };

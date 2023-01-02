@@ -10,7 +10,7 @@ import { GamesProvider } from '../../../../../context/GamesContext';
 import type { Dayjs } from 'dayjs';
 import type { MobileTodayGamesProps } from './MobileTodayGames.types';
 
-const MobileTodayGames = ({ games, shouldFetch }: MobileTodayGamesProps) => {
+const MobileTodayGames = ({ games, shouldRefetch }: MobileTodayGamesProps) => {
   const [selectedDate, setSelectedDate] = useState<Dayjs | Date>(new Date());
 
   const handleChange = (newValue: Dayjs | null) => {
@@ -22,7 +22,7 @@ const MobileTodayGames = ({ games, shouldFetch }: MobileTodayGamesProps) => {
       <GamesProvider
         gameDate={selectedDate}
         initialValues={{ games }}
-        shouldFetch={shouldFetch}
+        shouldRefetch={shouldRefetch}
       >
         <Box sx={{ display: 'flex', position: 'relative', height: 89 }}>
           <Box
