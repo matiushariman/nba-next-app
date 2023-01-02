@@ -1,6 +1,9 @@
 import { rest } from 'msw';
 
-import type { GetScoresBaseRes } from '../lib/scores/getScores/getScores.types';
+import type {
+  GetScoresBaseRes,
+  GetScoresDateGame,
+} from '../lib/scores/getScores/getScores.types';
 import { mockGetScoresRes } from './data';
 
 export const handlers = [
@@ -9,7 +12,10 @@ export const handlers = [
     (req, res, ctx) =>
       res(ctx.status(200), ctx.json<GetScoresBaseRes>(mockGetScoresRes))
   ),
-  rest.get('http://localhost/api/scores', (req, res, ctx) =>
-    res(ctx.status(200), ctx.json<GetScoresBaseRes>(mockGetScoresRes))
+  rest.post('http://localhost/api/scores', (req, res, ctx) =>
+    res(
+      ctx.status(200),
+      ctx.json<GetScoresDateGame[]>(mockGetScoresRes.payload.date?.games ?? [])
+    )
   ),
 ];

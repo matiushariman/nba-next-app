@@ -3,7 +3,7 @@
  */
 import '@testing-library/jest-dom';
 
-import { server } from './mocks/server';
+import { server } from './src/mocks/server';
 
 beforeAll(() => {
   // Enable the mocking in tests.

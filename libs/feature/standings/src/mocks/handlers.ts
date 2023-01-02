@@ -1,7 +1,7 @@
 import { rest } from 'msw';
 
 import { mockFetchConferenceStandingsRes } from './mockData';
-import { FetchConferenceStandingsBaseRes } from '../src';
+import { FetchConferenceStandingsBaseRes } from '../index';
 
 export const handlers = [
   rest.get(

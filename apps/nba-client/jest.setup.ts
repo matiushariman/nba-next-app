@@ -2,7 +2,6 @@
  * Enable `@testing-library/jest-dom` matchers such as toHaveTextContent or toHaveAttribute.
  */
 import '@testing-library/jest-dom';
-import 'whatwg-fetch';
 import { server } from './__mocks__/server';
 
 beforeAll(() => {

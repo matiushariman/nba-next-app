@@ -1,4 +1,4 @@
-import { FetchConferenceStandingsBaseRes } from '../src';
+import { FetchConferenceStandingsBaseRes } from '../index';
 
 export const mockFetchConferenceStandingsRes: FetchConferenceStandingsBaseRes =
   {
