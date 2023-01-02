@@ -17,6 +17,7 @@
     "paths": {
       "@nba-app/api-client": ["libs/api-client/src/index.ts"],
       "@nba-app/date-utils": ["libs/date-utils/src/index.ts"],
+      "@nba-app/feature-standings": ["libs/feature/standings/src/index.ts"],
       "@nba-app/formatting-utils": ["libs/formatting-utils/src/index.ts"],
       "@nba-app/test-utils": ["libs/test-utils/src/index.ts"],
       "@nba-app/ui": ["libs/ui/src/index.ts"]

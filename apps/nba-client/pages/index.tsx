@@ -10,9 +10,10 @@ import { useDesktopView } from '@nba-app/ui';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { lazy, Suspense, useState, useEffect } from 'react';
+import { Standings } from '@nba-app/feature-standings';
+
 import { TodayGames } from '../components/pages/Home';
 import { Header } from '../components/Header';
-import { Standings } from '../components/pages/Home/Standings';
 
 interface HomeProps {
   readonly games: GetScoresDateGame[];
