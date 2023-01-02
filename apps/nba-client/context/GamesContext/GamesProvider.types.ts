@@ -8,4 +8,5 @@ export interface GamesProviderProps {
   initialValues?: {
     games: GetScoresDateGame[];
   };
+  shouldFetch?: boolean;
 }
