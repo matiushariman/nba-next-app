@@ -54,7 +54,7 @@ export const ConferenceStandingsTable = ({
                 align={String(i) !== '0' ? 'right' : 'left'}
                 sx={(theme) => ({
                   minWidth: header.minWidth,
-                  ...(i === 0 && {
+                  ...(String(i) === '0' && {
                     position: 'sticky',
                     left: 0,
                     backgroundColor: theme.palette.background.paper,
@@ -71,6 +71,7 @@ export const ConferenceStandingsTable = ({
             <TableRow key={team.profile.id}>
               <TableCell
                 sx={(theme) => ({
+                  minWidth: 225,
                   display: 'flex',
                   alignItems: 'center',
                   position: 'sticky',
