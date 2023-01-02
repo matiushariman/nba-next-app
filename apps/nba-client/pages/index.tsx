@@ -3,7 +3,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { formatDate } from '@nba-app/date-utils';
 import { useDesktopView } from '@nba-app/ui';
 import Box from '@mui/material/Box';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import { TodayGames } from '../components/pages/Home';
 import { Header } from '../components/Header';
 
@@ -21,6 +21,15 @@ export default function Home({
   shouldRefetch,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const isDesktopView = useDesktopView();
+  const [isFirstMount, setIsFirstMount] = useState(true);
+
+  useEffect(() => {
+    setIsFirstMount(false);
+  }, []);
+
+  if (isFirstMount) {
+    return null;
+  }
 
   return (
     <Box sx={{ display: 'flex' }}>
