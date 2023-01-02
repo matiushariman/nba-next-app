@@ -52,7 +52,17 @@ export default function Home({
             <MobileTodayGames games={games} shouldRefetch={shouldRefetch} />
           </Suspense>
         )}
-        <Container sx={{ pt: 4, pb: 2 }}>
+        <Container
+          sx={(theme) => ({
+            pt: 4,
+            pb: 2,
+            [theme.breakpoints.down('md')]: {
+              pl: 0,
+              pr: 0,
+              pt: 2,
+            },
+          })}
+        >
           <Standings conferenceStandings={conferenceStandings} />
         </Container>
       </Box>
