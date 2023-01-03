@@ -1,35 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import {
-  fetchScores,
-  GetScoresDateGame,
-  GetScoresReq,
-} from '@nba-app/api-client';
-import useSWR, { SWRConfiguration } from 'swr';
-import axios from 'axios';
-
-interface UseFetchScoresWithSWR {
-  readonly data: GetScoresReq;
-  readonly config?: SWRConfiguration;
-}
-
-export const useFetchScoresWithSWR = ({
-  data,
-  config,
-}: UseFetchScoresWithSWR) => {
-  return useSWR<GetScoresDateGame[]>(
-    ['/api/scores', data],
-    ([url, data]) =>
-      axios.post<GetScoresDateGame[]>(url, data).then((res) => res.data),
-    config
-  );
-};
+import { fetchScores, FetchScoresReq } from '@nba-app/feature-scores';
 
 export default async function scoresHandler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   if (req.method === 'POST') {
-    const { gameDate } = req.body as GetScoresReq;
+    const { gameDate } = req.body as FetchScoresReq;
 
     const data = await fetchScores({ gameDate });
 
