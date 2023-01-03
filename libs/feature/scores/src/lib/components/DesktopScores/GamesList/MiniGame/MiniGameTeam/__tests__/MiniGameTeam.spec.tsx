@@ -1,7 +1,7 @@
 import { render, screen } from '@nba-app/test-utils';
 import { MiniGameTeam } from '../MiniGameTeam';
 
-describe(MiniGameTeam, () => {
+describe('MiniGameTeam', () => {
   it('should render team record if game has not started (status 1)', () => {
     render(
       <MiniGameTeam

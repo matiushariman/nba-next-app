@@ -1,7 +1,7 @@
 import { render, screen } from '@nba-app/test-utils';
 import { MobileGameTeam } from '../MobileGameTeam';
 
-describe('MobileTodayGameTeam', () => {
+describe('MobileGameTeam', () => {
   it('should render team record if game has not started (status 1)', () => {
     render(
       <MobileGameTeam

@@ -1,8 +1,8 @@
 import { render, screen } from '@nba-app/test-utils';
-import { GamesList } from '../GamesList';
+import { MobileGamesList } from '../MobileGamesList';
 
-jest.mock('../../../../../../context/GamesContext', () => ({
-  useGamesContext: jest
+jest.mock('../../../context/ScoresContext', () => ({
+  useScoresContext: jest
     .fn()
     .mockReturnValueOnce({
       isLoading: false,
@@ -487,9 +487,9 @@ jest.mock('../../../../../../context/GamesContext', () => ({
     }),
 }));
 
-describe('TodayGamesList', () => {
+describe('MobileGamesList', () => {
   beforeEach(() => {
-    render(<GamesList isExpandedMode />);
+    render(<MobileGamesList />);
   });
 
   it('should render no games scheduled message when there is no game', () => {
@@ -497,6 +497,6 @@ describe('TodayGamesList', () => {
   });
 
   it('should render list of games when there is game', () => {
-    expect(screen.getByLabelText(/list of games/i)).toBeVisible();
+    expect(screen.getByLabelText(/game between/i)).toBeVisible();
   });
 });

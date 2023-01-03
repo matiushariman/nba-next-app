@@ -1,10 +1,10 @@
 import { render, screen } from '@nba-app/test-utils';
-import { GameStatus } from '../GameStatus';
+import { MiniGameStatus } from '../MiniGameStatus';
 
-describe(GameStatus, () => {
+describe('MiniGameStatus', () => {
   it('should render game time if game status is 1 (PRE GAME)', () => {
     render(
-      <GameStatus
+      <MiniGameStatus
         period=""
         periodClock=""
         status="1"
@@ -18,7 +18,7 @@ describe(GameStatus, () => {
 
   it('should render periodClock if game status is 2 (LIVE)', () => {
     render(
-      <GameStatus
+      <MiniGameStatus
         period="4"
         periodClock="12:00"
         status="2"
@@ -32,7 +32,7 @@ describe(GameStatus, () => {
 
   it('should render statusDesc if game status is 3 (end game)', () => {
     render(
-      <GameStatus
+      <MiniGameStatus
         period="4"
         periodClock=""
         status="3"

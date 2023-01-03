@@ -1,7 +1,7 @@
 import { render, screen } from '@nba-app/test-utils';
 import { MiniGame } from '../MiniGame';
 
-describe(MiniGame, () => {
+describe('MiniGame', () => {
   it('should render grey background in dark mode', () => {
     render(
       <MiniGame

@@ -1,7 +1,7 @@
 import { render, screen } from '@nba-app/test-utils';
 import { GameScore } from '../GameScore';
 
-describe(GameScore, () => {
+describe('GameScore', () => {
   it('should render nothing if game has not started (status 1)', () => {
     const { container } = render(
       <GameScore awayScore={0} homeScore={0} status="1" />

@@ -1,7 +1,7 @@
 import { render, screen } from '@nba-app/test-utils';
-import { ScoresProvider, GamesConsumer } from '../ScoresProvider';
+import { ScoresProvider, ScoresConsumer } from '../ScoresProvider';
 
-describe('GameContext', () => {
+describe('ScoresContext', () => {
   it('should fetch games data from API', async () => {
     render(
       <ScoresProvider
@@ -10,7 +10,7 @@ describe('GameContext', () => {
           games: [],
         }}
       >
-        <GamesConsumer>
+        <ScoresConsumer>
           {({ games }) => (
             <ul>
               {games.map((game) => (
@@ -20,7 +20,7 @@ describe('GameContext', () => {
               ))}
             </ul>
           )}
-        </GamesConsumer>
+        </ScoresConsumer>
       </ScoresProvider>
     );
 

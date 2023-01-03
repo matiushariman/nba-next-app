@@ -1,10 +1,10 @@
 import { render, screen } from '@nba-app/test-utils';
-import { MobileGameStatus } from '../MobileGameStatus';
+import { GameStatus } from '../GameStatus';
 
-describe('MobileTodayGameStatus', () => {
+describe('GameStatus', () => {
   it('should render game time if game status is 1 (PRE GAME)', () => {
     render(
-      <MobileGameStatus
+      <GameStatus
         period=""
         periodClock=""
         status="1"
@@ -18,7 +18,7 @@ describe('MobileTodayGameStatus', () => {
 
   it('should render periodClock if game status is 2 (LIVE)', () => {
     render(
-      <MobileGameStatus
+      <GameStatus
         period="4"
         periodClock="12:00"
         status="2"
@@ -32,7 +32,7 @@ describe('MobileTodayGameStatus', () => {
 
   it('should render statusDesc if game status is 3 (end game)', () => {
     render(
-      <MobileGameStatus
+      <GameStatus
         period="4"
         periodClock=""
         status="3"
