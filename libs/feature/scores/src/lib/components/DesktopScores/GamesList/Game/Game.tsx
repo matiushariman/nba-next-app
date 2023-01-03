@@ -2,7 +2,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
-import { displayFormattedTeamRecord } from '@nba-app/formatting-utils';
+
+import { displayFormattedTeamRecord } from '../../../../utils';
 
 import { GameTeam } from './GameTeam';
 import { GameScore } from './GameScore';

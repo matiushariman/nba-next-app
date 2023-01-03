@@ -1,7 +1,10 @@
 import Typography from '@mui/material/Typography';
-import { displayLiveGameStatusText } from '@nba-app/formatting-utils';
 
-import { convertESTtoLocalTime, formatDate } from '../../../../../utils';
+import {
+  convertESTtoLocalTime,
+  formatDate,
+  displayLiveGameStatusText,
+} from '../../../../../utils';
 
 import type { MobileGameStatusProps } from './MobileGameStatus.types';
 

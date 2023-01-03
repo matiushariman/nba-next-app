@@ -1,10 +1,10 @@
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import { displayFormattedTeamRecord } from '@nba-app/formatting-utils';
 
 import { MiniGameTeam } from './MiniGameTeam';
 import { MiniGameStatus } from './MiniGameStatus';
+import { displayFormattedTeamRecord } from '../../../../utils';
 
 import type { MiniGameProps } from './MiniGame.types';
 

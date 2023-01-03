@@ -1,6 +1,6 @@
 import { displayLiveGameStatusText } from '../displayLiveGameStatusText';
 
-describe(displayLiveGameStatusText, () => {
+describe('displayLiveGameStatusText', () => {
   it('should return description if periodClock is empty', () => {
     expect(displayLiveGameStatusText('2', '', 'HALF TIME')).toEqual(
       'HALF TIME'

@@ -1,9 +1,9 @@
-import { displayFormattedTeamRecord } from '@nba-app/formatting-utils';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
 import { MobileGameStatus } from './MobileGameStatus';
 import { MobileGameTeam } from './MobileGameTeam';
+import { displayFormattedTeamRecord } from '../../../../utils';
 
 import type { MobileGameProps } from './MobileGame.types';
 
