@@ -1,4 +1,4 @@
-import { renderHook, waitFor } from '@nba-app/test-utils';
+import { renderHook, waitFor } from '@nba-app/scores-test-utils';
 import { SWRConfig } from 'swr';
 
 import { useFetchScores } from '../useFetchScores';

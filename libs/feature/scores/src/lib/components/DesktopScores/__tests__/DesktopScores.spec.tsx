@@ -1,4 +1,4 @@
-import { render, screen } from '@nba-app/test-utils';
+import { render, screen } from '@nba-app/scores-test-utils';
 import userEvent from '@testing-library/user-event';
 
 import { DesktopScores } from '../DesktopScores';

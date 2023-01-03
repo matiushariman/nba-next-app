@@ -17,6 +17,9 @@
     "paths": {
       "@nba-app/feature-scores": ["libs/feature/scores/src/index.ts"],
       "@nba-app/feature-standings": ["libs/feature/standings/src/index.ts"],
+      "@nba-app/scores-test-utils": [
+        "libs/feature/scores-test-utils/src/index.ts"
+      ],
       "@nba-app/test-utils": ["libs/test-utils/src/index.ts"],
       "@nba-app/ui": ["libs/ui/src/index.ts"]
     }
