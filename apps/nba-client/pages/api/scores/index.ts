@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import {
   fetchScores,
-  GetScoresDateGame,
   GetScoresReq,
-} from '@nba-app/api-client';
+  GetScoresDateGame,
+} from '@nba-app/feature-scores';
 import useSWR, { SWRConfiguration } from 'swr';
 import axios from 'axios';
 

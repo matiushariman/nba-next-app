@@ -1,5 +1,3 @@
-import { DesktopScores, MobileScores } from './lib';
-
 export * from './lib';
-
-export default { DesktopScores, MobileScores };
+export * from './mocks/handlers';
+export * from './mocks/mockData';

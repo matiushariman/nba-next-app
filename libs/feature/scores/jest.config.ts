@@ -10,4 +10,6 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/feature/scores',
+  setupFilesAfterEnv: ['./jest.setup.ts'],
+  coverageReporters: ['json', ['text', { skipFull: true }]],
 };
