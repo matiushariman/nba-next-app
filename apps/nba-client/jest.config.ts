@@ -14,6 +14,8 @@ export default {
     '!./**/*.styles.tsx',
     '!./**/api/**',
     '!./next.config.js',
+    '!./pages/_app.tsx',
+    '!./pages/_document.tsx',
   ],
   coverageReporters: ['json', ['text', { skipFull: true }]],
 };
