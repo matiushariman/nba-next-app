@@ -69,8 +69,8 @@ jobs:
         with:
           name: coverage
           path: coverage/**
-  upload-api-client-coverage:
-    name: Upload API Client coverage to codecov
+  upload-feature-scores-coverage:
+    name: Upload feature-scores coverage to codecov
     runs-on: ubuntu-latest
     needs: test
     steps:
@@ -84,8 +84,8 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
-          files: '**/coverage/libs/api-client/coverage-final.json'
-          flags: api-client
+          files: '**/coverage/libs/feature/scores/coverage-final.json'
+          flags: feature-scores
   upload-date-utils-coverage:
     name: Upload date-utils coverage to codecov
     runs-on: ubuntu-latest

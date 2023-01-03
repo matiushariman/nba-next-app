@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nba-app/api-client": ["libs/api-client/src/index.ts"],
       "@nba-app/date-utils": ["libs/date-utils/src/index.ts"],
       "@nba-app/feature-scores": ["libs/feature/scores/src/index.ts"],
       "@nba-app/feature-standings": ["libs/feature/standings/src/index.ts"],

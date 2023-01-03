@@ -6,12 +6,12 @@
     <tr>
       <th rowspan="2">Overall</th>
       <th rowspan="2">NBA Client</th>
-      <th >Feature</th>
-      <th colspan="4">Libs</th>
+      <th colspan="2">Feature</th>
+      <th colspan="3">Libs</th>
     </tr>
     <tr>
       <th>Standings</th>
-      <th>api-client</th>
+      <th>Scores</th>
       <th>date-utils</th>
       <th>formatting-utils</th>
       <th>UI</th>
@@ -29,7 +29,7 @@
         <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=feature-standings" alt="feature-standings coverage" />
       </td>
       <td align="center">
-        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=api-client" alt="api client coverage" />
+        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=feature-scores" alt="feature-scores coverage" />
       </td>
       <td align="center">
         <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=date-utils" alt="date utils coverage" />
