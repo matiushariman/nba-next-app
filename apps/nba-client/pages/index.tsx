@@ -3,15 +3,17 @@ import { formatDate } from '@nba-app/date-utils';
 import { useDesktopView } from '@nba-app/ui';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { lazy, Suspense, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Standings,
   fetchConferenceStandings,
   FetchConferenceStandingsStandingGroup,
 } from '@nba-app/feature-standings';
-import Scores, {
+import {
   fetchScores,
   GetScoresDateGame,
+  DesktopScores,
+  MobileScores,
 } from '@nba-app/feature-scores';
 
 import { Header } from '../components/Header';
@@ -21,10 +23,6 @@ interface HomeProps {
   readonly shouldRefetch: boolean;
   readonly conferenceStandings: FetchConferenceStandingsStandingGroup[];
 }
-
-const MobileTodayGames = lazy(
-  () => import('../components/pages/Home/Mobile/MobileTodayGames')
-);
 
 export default function Home({
   games,
@@ -45,14 +43,12 @@ export default function Home({
   return (
     <Box sx={{ display: 'flex' }}>
       {isDesktopView && (
-        <Scores.DesktopScores games={games} shouldRefetch={shouldRefetch} />
+        <DesktopScores games={games} shouldRefetch={shouldRefetch} />
       )}
       <Box sx={{ flexGrow: 1 }}>
         <Header />
         {!isDesktopView && (
-          <Suspense fallback={null}>
-            <MobileTodayGames games={games} shouldRefetch={shouldRefetch} />
-          </Suspense>
+          <MobileScores games={games} shouldRefetch={shouldRefetch} />
         )}
         <Container
           sx={(theme) => ({

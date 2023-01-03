@@ -1,4 +1,5 @@
-import { DesktopScores } from './lib';
+import { DesktopScores, MobileScores } from './lib';
 
 export * from './lib';
-export default { DesktopScores };
+
+export default { DesktopScores, MobileScores };
