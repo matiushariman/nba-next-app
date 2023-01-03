@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useContext } from 'react';
-import { formatDate } from '@nba-app/date-utils';
+import { formatDate } from '../../utils';
 
 import { ScoresContext } from './ScoresContext';
 import { useFetchScores } from '../../hooks';

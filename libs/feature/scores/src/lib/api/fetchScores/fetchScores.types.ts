@@ -1,3 +1,5 @@
+import type { Dayjs } from 'dayjs';
+
 interface League {
   readonly id: '00';
   readonly name: 'NBA';
@@ -216,5 +218,5 @@ export interface FetchScoresBaseRes {
 }
 
 export interface FetchScoresReq {
-  readonly gameDate: string;
+  readonly gameDate: Date | Dayjs | string;
 }

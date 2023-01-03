@@ -8,10 +8,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
 import { useState } from 'react';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { formatDate } from '@nba-app/date-utils';
+
 import { GamesList } from './GamesList';
 import { Drawer } from './DesktopScores.styles';
 import { ScoresProvider } from '../../context/ScoresContext';
+import { formatDate } from '../../utils';
 
 import type { Dayjs } from 'dayjs';
 import type { DesktopScoresProps } from './DesktopScores.types';

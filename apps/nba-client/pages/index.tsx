@@ -1,5 +1,4 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { formatDate } from '@nba-app/date-utils';
 import { useDesktopView } from '@nba-app/ui';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -70,7 +69,7 @@ export default function Home({
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   const games = await fetchScores({
-    gameDate: formatDate(new Date()),
+    gameDate: new Date(),
   });
   const conferenceStandings = await fetchConferenceStandings();
 
