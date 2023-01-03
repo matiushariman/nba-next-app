@@ -1,4 +1,4 @@
-import type { GetScoresDateGameTeamProfile } from '@nba-app/api-client';
+import type { GetScoresDateGameTeamProfile } from '../../../../../api';
 
 export interface GameTeamProps
   extends Pick<GetScoresDateGameTeamProfile, 'id' | 'name'> {

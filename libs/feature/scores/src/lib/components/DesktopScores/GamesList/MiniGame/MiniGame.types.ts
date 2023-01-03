@@ -1,4 +1,4 @@
-import type { GetScoresDateGame } from '@nba-app/api-client';
+import type { GetScoresDateGame } from '../../../../api';
 
 export interface MiniGameProps {
   readonly game: GetScoresDateGame;

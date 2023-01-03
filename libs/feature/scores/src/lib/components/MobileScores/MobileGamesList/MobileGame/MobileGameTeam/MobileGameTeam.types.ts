@@ -2,7 +2,7 @@ import type {
   GetScoresDateGameTeamProfile,
   GetScoresDateGameTeamScore,
   GetScoresDateGameBoxscore,
-} from '@nba-app/api-client';
+} from '../../../../../api';
 
 export interface MobileGameTeamProps
   extends Pick<GetScoresDateGameTeamProfile, 'id' | 'name' | 'abbr'>,
