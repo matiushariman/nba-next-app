@@ -1,10 +1,10 @@
 import type {
-  GetScoresDateGameBoxscore,
-  GetScoresDateGameProfile,
+  FetchScoresDateGameBoxscore,
+  FetchScoresDateGameProfile,
 } from '../../../../../api';
 
 export type MiniGameStatusProps = Pick<
-  GetScoresDateGameBoxscore,
+  FetchScoresDateGameBoxscore,
   'status' | 'statusDesc' | 'period' | 'periodClock'
 > &
-  Pick<GetScoresDateGameProfile, 'dateTimeEt'>;
+  Pick<FetchScoresDateGameProfile, 'dateTimeEt'>;

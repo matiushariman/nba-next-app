@@ -1,6 +1,6 @@
-import type { GetScoresDateGame } from '../../api';
+import type { FetchScoresDateGame } from '../../api';
 
 export interface ScoresContextProps {
-  games: GetScoresDateGame[];
+  games: FetchScoresDateGame[];
   isLoading: boolean;
 }

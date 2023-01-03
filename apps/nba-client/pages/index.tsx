@@ -11,7 +11,7 @@ import {
 } from '@nba-app/feature-standings';
 import {
   fetchScores,
-  GetScoresDateGame,
+  FetchScoresDateGame,
   DesktopScores,
   MobileScores,
 } from '@nba-app/feature-scores';
@@ -19,7 +19,7 @@ import {
 import { Header } from '../components/Header';
 
 interface HomeProps {
-  readonly games: GetScoresDateGame[];
+  readonly games: FetchScoresDateGame[];
   readonly shouldRefetch: boolean;
   readonly conferenceStandings: FetchConferenceStandingsStandingGroup[];
 }

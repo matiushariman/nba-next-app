@@ -1,6 +1,6 @@
-import { GetScoresBaseRes } from '../lib';
+import { FetchScoresBaseRes } from '../lib';
 
-export const mockFetchScoresRes: GetScoresBaseRes = {
+export const mockFetchScoresRes: FetchScoresBaseRes = {
   payload: {
     league: {
       id: '00',

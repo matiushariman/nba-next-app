@@ -1,5 +1,5 @@
-import type { GetScoresDateGame } from '../../../../api';
+import type { FetchScoresDateGame } from '../../../../api';
 
 export interface GameProps {
-  readonly game: GetScoresDateGame;
+  readonly game: FetchScoresDateGame;
 }

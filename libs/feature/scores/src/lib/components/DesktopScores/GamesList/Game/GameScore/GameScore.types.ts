@@ -1,12 +1,12 @@
 import type {
-  GetScoresDateGameTeamScore,
-  GetScoresDateGameBoxscore,
+  FetchScoresDateGameTeamScore,
+  FetchScoresDateGameBoxscore,
 } from '../../../../../api';
 
-type Score = GetScoresDateGameTeamScore['score'];
+type Score = FetchScoresDateGameTeamScore['score'];
 
 export interface GameScoreProps
-  extends Pick<GetScoresDateGameBoxscore, 'status'> {
+  extends Pick<FetchScoresDateGameBoxscore, 'status'> {
   awayScore: Score;
   homeScore: Score;
 }

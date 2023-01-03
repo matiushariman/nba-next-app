@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-import type { GetScoresBaseRes, GetScoresReq } from './fetchScores.types';
+import type { FetchScoresBaseRes, FetchScoresReq } from './fetchScores.types';
 
-export const fetchScores = async ({ gameDate }: GetScoresReq) => {
-  const { data } = await axios.get<GetScoresBaseRes>(
+export const fetchScores = async ({ gameDate }: FetchScoresReq) => {
+  const { data } = await axios.get<FetchScoresBaseRes>(
     `https://sg.global.nba.com/stats2/scores/daily.json?gameDate=${gameDate}`
   );
 

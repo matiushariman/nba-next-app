@@ -1,8 +1,8 @@
 import { SWRConfiguration } from 'swr';
 
-import type { GetScoresReq } from '../../api';
+import type { FetchScoresReq } from '../../api';
 
 export interface UseFetchScore {
-  readonly data: GetScoresReq;
+  readonly data: FetchScoresReq;
   readonly config?: SWRConfiguration;
 }

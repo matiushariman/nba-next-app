@@ -35,7 +35,7 @@ interface Season {
   readonly yearDisplay: string;
 }
 
-export interface GetScoresDateGameProfile {
+export interface FetchScoresDateGameProfile {
   readonly arenaLocation: string;
   readonly arenaName: string;
   readonly awayTeamId: string;
@@ -49,7 +49,7 @@ export interface GetScoresDateGameProfile {
   readonly utcMillis: string;
 }
 
-export interface GetScoresDateGameBoxscore {
+export interface FetchScoresDateGameBoxscore {
   readonly attendance: string;
   readonly awayScore: number;
   readonly gameLength: string;
@@ -65,9 +65,9 @@ export interface GetScoresDateGameBoxscore {
   readonly ties: string;
 }
 
-export type GetScoresDateGameTeamProfile = TeamProfile;
+export type FetchScoresDateGameTeamProfile = TeamProfile;
 
-export interface GetScoresDateGameTeamMatchup {
+export interface FetchScoresDateGameTeamMatchup {
   readonly confRank: string;
   readonly divRank: string;
   readonly losses: string;
@@ -75,7 +75,7 @@ export interface GetScoresDateGameTeamMatchup {
   readonly wins: string;
 }
 
-export interface GetScoresDateGameTeamScore {
+export interface FetchScoresDateGameTeamScore {
   readonly assists: number;
   readonly biggestLead: number;
   readonly blocks: number;
@@ -123,7 +123,7 @@ export interface GetScoresDateGameTeamScore {
   readonly turnovers: number;
 }
 
-interface GetScoresDateGameTeamGameLeaderProfile {
+interface FetchScoresDateGameTeamGameLeaderProfile {
   readonly code: string;
   readonly country: string;
   readonly countryEn: string;
@@ -147,7 +147,7 @@ interface GetScoresDateGameTeamGameLeaderProfile {
   readonly weight: string;
 }
 
-interface GetScoresDateGameTeamGameLeaderStatTotal {
+interface FetchScoresDateGameTeamGameLeaderStatTotal {
   readonly assists: number;
   readonly blocks: number;
   readonly defRebs: number;
@@ -172,49 +172,49 @@ interface GetScoresDateGameTeamGameLeaderStatTotal {
   readonly turnovers: number;
 }
 
-interface GetScoresDateGameTeamGameLeader {
-  readonly profile: GetScoresDateGameTeamGameLeaderProfile;
-  readonly statTotal: GetScoresDateGameTeamGameLeaderStatTotal;
+interface FetchScoresDateGameTeamGameLeader {
+  readonly profile: FetchScoresDateGameTeamGameLeaderProfile;
+  readonly statTotal: FetchScoresDateGameTeamGameLeaderStatTotal;
 }
 
-export interface GetScoresDateGameTeam {
-  readonly profile: GetScoresDateGameTeamProfile;
-  readonly matchup: GetScoresDateGameTeamMatchup;
-  readonly score: GetScoresDateGameTeamScore;
-  readonly pointGameLeader: GetScoresDateGameTeamGameLeader;
-  readonly assistGameLeader: GetScoresDateGameTeamGameLeader;
-  readonly reboundGameLeader: GetScoresDateGameTeamGameLeader;
+export interface FetchScoresDateGameTeam {
+  readonly profile: FetchScoresDateGameTeamProfile;
+  readonly matchup: FetchScoresDateGameTeamMatchup;
+  readonly score: FetchScoresDateGameTeamScore;
+  readonly pointGameLeader: FetchScoresDateGameTeamGameLeader;
+  readonly assistGameLeader: FetchScoresDateGameTeamGameLeader;
+  readonly reboundGameLeader: FetchScoresDateGameTeamGameLeader;
 }
 
-export interface GetScoresDateGame {
-  readonly profile: GetScoresDateGameProfile;
-  readonly boxscore: GetScoresDateGameBoxscore;
+export interface FetchScoresDateGame {
+  readonly profile: FetchScoresDateGameProfile;
+  readonly boxscore: FetchScoresDateGameBoxscore;
   readonly urls: [];
   readonly broadcasters: [];
-  readonly homeTeam: GetScoresDateGameTeam;
-  readonly awayTeam: GetScoresDateGameTeam;
+  readonly homeTeam: FetchScoresDateGameTeam;
+  readonly awayTeam: FetchScoresDateGameTeam;
   readonly ifNecessary: boolean;
   readonly seriesText: null | string;
 }
 
-export interface GetScoresDate {
-  readonly games: GetScoresDateGame[];
+export interface FetchScoresDate {
+  readonly games: FetchScoresDateGame[];
   readonly dateMillis: string;
   readonly gameCount: string;
 }
 
-export interface GetScoresPayload {
+export interface FetchScoresPayload {
   readonly league: League;
   readonly season: Season;
-  readonly date: GetScoresDate | null;
+  readonly date: FetchScoresDate | null;
   readonly nextAvailableDateMillis: string;
   readonly utcMillis: string;
 }
 
-export interface GetScoresBaseRes {
-  readonly payload: GetScoresPayload;
+export interface FetchScoresBaseRes {
+  readonly payload: FetchScoresPayload;
 }
 
-export interface GetScoresReq {
+export interface FetchScoresReq {
   readonly gameDate: string;
 }

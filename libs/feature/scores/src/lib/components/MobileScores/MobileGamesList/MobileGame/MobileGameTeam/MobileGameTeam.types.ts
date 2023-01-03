@@ -1,12 +1,12 @@
 import type {
-  GetScoresDateGameTeamProfile,
-  GetScoresDateGameTeamScore,
-  GetScoresDateGameBoxscore,
+  FetchScoresDateGameTeamProfile,
+  FetchScoresDateGameTeamScore,
+  FetchScoresDateGameBoxscore,
 } from '../../../../../api';
 
 export interface MobileGameTeamProps
-  extends Pick<GetScoresDateGameTeamProfile, 'id' | 'name' | 'abbr'>,
-    Pick<GetScoresDateGameTeamScore, 'score'>,
-    Pick<GetScoresDateGameBoxscore, 'status'> {
+  extends Pick<FetchScoresDateGameTeamProfile, 'id' | 'name' | 'abbr'>,
+    Pick<FetchScoresDateGameTeamScore, 'score'>,
+    Pick<FetchScoresDateGameBoxscore, 'status'> {
   teamRecord: string;
 }

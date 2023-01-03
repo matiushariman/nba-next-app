@@ -1,6 +1,6 @@
-import type { GetScoresDateGame } from '../../api';
+import type { FetchScoresDateGame } from '../../api';
 
 export interface MobileScoresProps {
-  readonly games: GetScoresDateGame[];
+  readonly games: FetchScoresDateGame[];
   readonly shouldRefetch: boolean;
 }
