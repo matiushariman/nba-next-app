@@ -1,4 +1,3 @@
-import { fetchScores, GetScoresDateGame } from '@nba-app/api-client';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { formatDate } from '@nba-app/date-utils';
 import { useDesktopView } from '@nba-app/ui';
@@ -10,8 +9,11 @@ import {
   fetchConferenceStandings,
   FetchConferenceStandingsStandingGroup,
 } from '@nba-app/feature-standings';
+import Scores, {
+  fetchScores,
+  GetScoresDateGame,
+} from '@nba-app/feature-scores';
 
-import { TodayGames } from '../components/pages/Home';
 import { Header } from '../components/Header';
 
 interface HomeProps {
@@ -43,7 +45,7 @@ export default function Home({
   return (
     <Box sx={{ display: 'flex' }}>
       {isDesktopView && (
-        <TodayGames games={games} shouldRefetch={shouldRefetch} />
+        <Scores.DesktopScores games={games} shouldRefetch={shouldRefetch} />
       )}
       <Box sx={{ flexGrow: 1 }}>
         <Header />
