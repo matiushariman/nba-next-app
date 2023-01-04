@@ -24,8 +24,7 @@
       "@nba-app/standings-test-utils": [
         "libs/feature/standings-test-utils/src/index.ts"
       ],
-      "@nba-app/test-utils": ["libs/test-utils/src/index.ts"],
-      "@nba-app/ui": ["libs/ui/src/index.ts"]
+      "@nba-app/test-utils": ["libs/test-utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

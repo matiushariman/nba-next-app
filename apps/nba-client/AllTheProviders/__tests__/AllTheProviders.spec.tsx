@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ColorModeContext } from '@nba-app/ui';
 import { useTheme } from '@mui/material/styles';
 import { useContext } from 'react';
 import { AllTheProviders } from '../AllTheProviders';
+import ColorModeContext from '../../context/ColorModeContext';
 
 const Children = () => {
   const colorMode = useContext(ColorModeContext);
