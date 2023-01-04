@@ -11,7 +11,7 @@
     <tr>
       <th>Standings</th>
       <th>Scores</th>
-      <th>UI</th>
+      <th>Shared Components</th>
     </tr>
   </thead>
   <tbody>
@@ -29,7 +29,7 @@
         <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=feature-scores" alt="feature-scores coverage" />
       </td>
       <td align="center">
-        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=ui" alt="UI coverage" />
+        <img src="https://codecov.io/gh/matiushariman/nba-next-app/branch/main/graph/badge.svg?flag=shared-components" alt="Shared components coverage" />
       </td>
     </tr>
   </tbody>
