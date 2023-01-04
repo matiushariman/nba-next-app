@@ -1,5 +1,4 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { useDesktopView } from '@nba-app/ui';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { useState, useEffect } from 'react';
@@ -16,6 +15,7 @@ import {
 } from '@nba-app/feature-scores';
 
 import { Header } from '../components/Header';
+import useDesktopView from '../hooks/useDesktopView';
 
 interface HomeProps {
   readonly games: FetchScoresDateGame[];
