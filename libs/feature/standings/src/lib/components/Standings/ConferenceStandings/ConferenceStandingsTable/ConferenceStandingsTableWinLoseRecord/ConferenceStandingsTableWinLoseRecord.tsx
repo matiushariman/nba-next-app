@@ -1,8 +1,12 @@
 import TableCell from '@mui/material/TableCell';
 
-import type { ConferenceStandingsTableWinLoseRecordProps } from './ConferenceStandingsTableWinLoseRecord.types';
+export interface ConferenceStandingsTableWinLoseRecordProps {
+  readonly wins: number | string;
+  readonly losses: number | string;
+  readonly displayName?: string;
+}
 
-export const ConferenceStandingsTableWinLoseRecord = ({
+const ConferenceStandingsTableWinLoseRecord = ({
   wins,
   losses,
   displayName = '',
@@ -29,3 +33,5 @@ export const ConferenceStandingsTableWinLoseRecord = ({
     </TableCell>
   );
 };
+
+export default ConferenceStandingsTableWinLoseRecord;

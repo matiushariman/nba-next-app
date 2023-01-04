@@ -7,13 +7,17 @@ import TableRow from '@mui/material/TableRow';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
-import { ConferenceStandingsTableTeamName } from './ConferenceStandingsTableTeamName';
-import { ConferenceStandingsTableWinPct } from './ConferenceStandingsTableWinPct';
-import { ConferenceStandingsTableWinLoseRecord } from './ConferenceStandingsTableWinLoseRecord';
-import { ConferenceStandingsTableStreak } from './ConferenceStandingsTableStreak';
+import ConferenceStandingsTableTeamName from './ConferenceStandingsTableTeamName';
+import ConferenceStandingsTableWinPct from './ConferenceStandingsTableWinPct';
+import ConferenceStandingsTableWinLoseRecord from './ConferenceStandingsTableWinLoseRecord';
+import ConferenceStandingsTableStreak from './ConferenceStandingsTableStreak';
 import { displayGameBehind } from './ConferenceStandingsTable.utils';
 
-import type { ConferenceStandingsTableProps } from './ConferenceStandingsTable.types';
+import type { FetchConferenceStandingsStandingGroup } from '../../../../api/fetchConferenceStandings';
+
+export interface ConferenceStandingsTableProps {
+  readonly conference: FetchConferenceStandingsStandingGroup;
+}
 
 const HEADER = [
   { label: 'Team', minWidth: 225 },
@@ -29,7 +33,7 @@ const HEADER = [
   { label: 'Streak', minWidth: 105 },
 ];
 
-export const ConferenceStandingsTable = ({
+const ConferenceStandingsTable = ({
   conference,
 }: ConferenceStandingsTableProps) => (
   <Stack spacing={1}>
@@ -124,3 +128,5 @@ export const ConferenceStandingsTable = ({
     </Box>
   </Stack>
 );
+
+export default ConferenceStandingsTable;

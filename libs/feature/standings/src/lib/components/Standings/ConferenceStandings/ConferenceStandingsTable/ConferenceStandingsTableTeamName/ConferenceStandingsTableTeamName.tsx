@@ -2,9 +2,13 @@ import Box from '@mui/material/Box';
 
 import { TeamLogo } from '@nba-app/shared-components';
 
-import type { ConferenceStandingsTableTeamNameProps } from './ConferenceStandingsTableTeamName.types';
+export interface ConferenceStandingsTableTeamNameProps {
+  readonly teamId: string;
+  readonly teamName: string;
+  readonly teamRank: number;
+}
 
-export const ConferenceStandingsTableTeamName = ({
+const ConferenceStandingsTableTeamName = ({
   teamRank,
   teamId,
   teamName,
@@ -17,3 +21,5 @@ export const ConferenceStandingsTableTeamName = ({
     {teamName}
   </Box>
 );
+
+export default ConferenceStandingsTableTeamName;

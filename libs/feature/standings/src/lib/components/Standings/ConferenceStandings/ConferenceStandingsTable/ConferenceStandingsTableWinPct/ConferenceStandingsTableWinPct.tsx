@@ -1,8 +1,10 @@
 import TableCell from '@mui/material/TableCell';
 
-import type { ConferenceStandingsTableWinPctProps } from './ConferenceStandingsTableWinPct.types';
+export interface ConferenceStandingsTableWinPctProps {
+  readonly winPct: number;
+}
 
-export const ConferenceStandingsTableWinPct = ({
+const ConferenceStandingsTableWinPct = ({
   winPct,
 }: ConferenceStandingsTableWinPctProps) => {
   const isWinningRecord = winPct >= 50;
@@ -23,3 +25,5 @@ export const ConferenceStandingsTableWinPct = ({
     </TableCell>
   );
 };
+
+export default ConferenceStandingsTableWinPct;
