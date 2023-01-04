@@ -1,13 +1,23 @@
 import { useState, useMemo, useEffect, useContext } from 'react';
 import { formatDate } from '../../utils';
 
-import { ScoresContext } from './ScoresContext';
-import { useFetchScores } from '../../hooks';
+import ScoresContext, { ScoresContextProps } from './ScoresContext';
+import useFetchScores from '../../hooks/useFetchScores';
 
-import type { ScoresProviderProps } from './ScoresProvider.types';
-import type { ScoresContextProps } from './ScoresContext.types';
+import type { ReactNode } from 'react';
+import type { Dayjs } from 'dayjs';
+import type { FetchScoresDateGame } from '../../api/fetchScores';
 
-export const ScoresProvider = ({
+export interface ScoresProviderProps {
+  children?: ReactNode;
+  gameDate: Dayjs | Date | string | null;
+  initialValues?: {
+    games: FetchScoresDateGame[];
+  };
+  shouldRefetch?: boolean;
+}
+
+const ScoresProvider = ({
   children,
   gameDate,
   initialValues,
@@ -43,6 +53,8 @@ export const ScoresProvider = ({
     </ScoresContext.Provider>
   );
 };
+
+export default ScoresProvider;
 
 export const ScoresConsumer = ScoresContext.Consumer;
 

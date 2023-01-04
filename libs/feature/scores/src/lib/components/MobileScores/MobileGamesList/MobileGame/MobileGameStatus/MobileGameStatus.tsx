@@ -6,9 +6,18 @@ import {
   displayLiveGameStatusText,
 } from '../../../../../utils';
 
-import type { MobileGameStatusProps } from './MobileGameStatus.types';
+import type {
+  FetchScoresDateGameBoxscore,
+  FetchScoresDateGameProfile,
+} from '../../../../../api/fetchScores';
 
-export const MobileGameStatus = ({
+export type MobileGameStatusProps = Pick<
+  FetchScoresDateGameBoxscore,
+  'status' | 'statusDesc' | 'period' | 'periodClock'
+> &
+  Pick<FetchScoresDateGameProfile, 'dateTimeEt'>;
+
+const MobileGameStatus = ({
   statusDesc,
   status,
   dateTimeEt,
@@ -50,3 +59,5 @@ export const MobileGameStatus = ({
     </Typography>
   );
 };
+
+export default MobileGameStatus;

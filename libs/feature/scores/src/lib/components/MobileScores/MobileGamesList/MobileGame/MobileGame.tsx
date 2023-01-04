@@ -1,13 +1,17 @@
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
-import { MobileGameStatus } from './MobileGameStatus';
-import { MobileGameTeam } from './MobileGameTeam';
+import MobileGameStatus from './MobileGameStatus';
+import MobileGameTeam from './MobileGameTeam';
 import { displayFormattedTeamRecord } from '../../../../utils';
 
-import type { MobileGameProps } from './MobileGame.types';
+import type { FetchScoresDateGame } from '../../../../api/fetchScores';
 
-export const MobileGame = ({ game }: MobileGameProps) => (
+export interface MobileGameProps {
+  readonly game: FetchScoresDateGame;
+}
+
+const MobileGame = ({ game }: MobileGameProps) => (
   <Box
     aria-label={`Game between ${game.awayTeam.profile.name} and ${game.homeTeam.profile.name}`}
     sx={{ display: 'inline-block', width: 140, p: 1, pr: 2, pl: 2 }}
@@ -45,3 +49,5 @@ export const MobileGame = ({ game }: MobileGameProps) => (
     </Stack>
   </Box>
 );
+
+export default MobileGame;

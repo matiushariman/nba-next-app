@@ -1,9 +1,20 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import type { GameScoreProps } from './GameScore.types';
+import type {
+  FetchScoresDateGameTeamScore,
+  FetchScoresDateGameBoxscore,
+} from '../../../../../api/fetchScores';
 
-export const GameScore = ({ homeScore, awayScore, status }: GameScoreProps) => {
+type Score = FetchScoresDateGameTeamScore['score'];
+
+export interface GameScoreProps
+  extends Pick<FetchScoresDateGameBoxscore, 'status'> {
+  awayScore: Score;
+  homeScore: Score;
+}
+
+const GameScore = ({ homeScore, awayScore, status }: GameScoreProps) => {
   if (status === '1') {
     return null;
   }
@@ -23,3 +34,5 @@ export const GameScore = ({ homeScore, awayScore, status }: GameScoreProps) => {
     </Box>
   );
 };
+
+export default GameScore;

@@ -1,2 +1,2 @@
+export { default } from './fetchScores';
 export * from './fetchScores.types';
-export * from './fetchScores';

@@ -2,13 +2,15 @@ import Stack from '@mui/material/Stack';
 import Backdrop from '@mui/material/Backdrop';
 import Typography from '@mui/material/Typography';
 
-import { Game } from './Game';
-import { MiniGame } from './MiniGame';
+import Game from './Game';
+import MiniGame from './MiniGame';
 import { useScoresContext } from '../../../context/ScoresContext';
 
-import type { GamesListProps } from './GamesList.types';
+export interface GamesListProps {
+  readonly isExpandedMode: boolean;
+}
 
-export const GamesList = ({ isExpandedMode }: GamesListProps) => {
+const GamesList = ({ isExpandedMode }: GamesListProps) => {
   const { games, isLoading } = useScoresContext();
 
   if (games.length === 0) {
@@ -43,3 +45,5 @@ export const GamesList = ({ isExpandedMode }: GamesListProps) => {
     </Stack>
   );
 };
+
+export default GamesList;

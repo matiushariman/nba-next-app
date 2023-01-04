@@ -1,5 +1,5 @@
 import { render, screen } from '@nba-app/scores-test-utils';
-import { MobileGameStatus } from '../MobileGameStatus';
+import MobileGameStatus from '../MobileGameStatus';
 
 describe('MobileGameStatus', () => {
   it('should render game time if game status is 1 (PRE GAME)', () => {

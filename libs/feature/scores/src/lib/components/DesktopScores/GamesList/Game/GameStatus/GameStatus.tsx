@@ -7,9 +7,18 @@ import {
   displayLiveGameStatusText,
 } from '../../../../../utils';
 
-import type { GameStatusProps } from './GameStatus.types';
+import type {
+  FetchScoresDateGameBoxscore,
+  FetchScoresDateGameProfile,
+} from '../../../../../api/fetchScores';
 
-export const GameStatus = ({
+export type GameStatusProps = Pick<
+  FetchScoresDateGameBoxscore,
+  'status' | 'statusDesc' | 'period' | 'periodClock'
+> &
+  Pick<FetchScoresDateGameProfile, 'dateTimeEt'>;
+
+const GameStatus = ({
   statusDesc,
   status,
   dateTimeEt,
@@ -50,3 +59,5 @@ export const GameStatus = ({
 
   return <Typography textTransform="uppercase">{statusDesc}</Typography>;
 };
+
+export default GameStatus;

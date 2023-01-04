@@ -1,5 +1,5 @@
 import { render, screen } from '@nba-app/scores-test-utils';
-import { GamesList } from '../GamesList';
+import GamesList from '../GamesList';
 
 jest.mock('../../../context/ScoresContext', () => ({
   useScoresContext: jest

@@ -1,5 +1,5 @@
 import { render, screen } from '@nba-app/scores-test-utils';
-import { MiniGameTeam } from '../MiniGameTeam';
+import MiniGameTeam from '../MiniGameTeam';
 
 describe('MiniGameTeam', () => {
   it('should render team record if game has not started (status 1)', () => {

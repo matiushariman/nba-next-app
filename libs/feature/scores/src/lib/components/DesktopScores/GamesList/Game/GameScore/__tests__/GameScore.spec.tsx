@@ -1,5 +1,5 @@
 import { render, screen } from '@nba-app/scores-test-utils';
-import { GameScore } from '../GameScore';
+import GameScore from '../GameScore';
 
 describe('GameScore', () => {
   it('should render nothing if game has not started (status 1)', () => {

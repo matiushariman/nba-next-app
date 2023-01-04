@@ -1,5 +1,5 @@
 import { render, screen } from '@nba-app/scores-test-utils';
-import { ScoresProvider, ScoresConsumer } from '../ScoresProvider';
+import ScoresProvider, { ScoresConsumer } from '../ScoresProvider';
 
 describe('ScoresContext', () => {
   it('should fetch games data from API', async () => {

@@ -2,9 +2,20 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { TeamLogo } from '@nba-app/shared-components';
 
-import type { MiniGameTeamProps } from './MiniGameTeam.types';
+import type {
+  FetchScoresDateGameTeamProfile,
+  FetchScoresDateGameTeamScore,
+  FetchScoresDateGameBoxscore,
+} from '../../../../../api/fetchScores';
 
-export const MiniGameTeam = ({
+export interface MiniGameTeamProps
+  extends Pick<FetchScoresDateGameTeamProfile, 'id' | 'name' | 'abbr'>,
+    Pick<FetchScoresDateGameTeamScore, 'score'>,
+    Pick<FetchScoresDateGameBoxscore, 'status'> {
+  teamRecord: string;
+}
+
+const MiniGameTeam = ({
   id,
   name,
   abbr,
@@ -30,3 +41,5 @@ export const MiniGameTeam = ({
     )}
   </Box>
 );
+
+export default MiniGameTeam;

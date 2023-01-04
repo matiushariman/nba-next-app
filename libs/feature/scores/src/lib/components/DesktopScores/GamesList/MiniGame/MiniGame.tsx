@@ -2,13 +2,17 @@ import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
-import { MiniGameTeam } from './MiniGameTeam';
-import { MiniGameStatus } from './MiniGameStatus';
+import MiniGameTeam from './MiniGameTeam';
+import MiniGameStatus from './MiniGameStatus';
 import { displayFormattedTeamRecord } from '../../../../utils';
 
-import type { MiniGameProps } from './MiniGame.types';
+import type { FetchScoresDateGame } from '../../../../api/fetchScores';
 
-export const MiniGame = ({ game }: MiniGameProps) => (
+export interface MiniGameProps {
+  readonly game: FetchScoresDateGame;
+}
+
+const MiniGame = ({ game }: MiniGameProps) => (
   <Card
     square
     sx={(theme) => ({
@@ -57,3 +61,5 @@ export const MiniGame = ({ game }: MiniGameProps) => (
     </Box>
   </Card>
 );
+
+export default MiniGame;

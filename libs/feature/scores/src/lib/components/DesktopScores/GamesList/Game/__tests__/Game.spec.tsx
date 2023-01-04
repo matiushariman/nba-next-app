@@ -1,5 +1,5 @@
 import { render, screen } from '@nba-app/scores-test-utils';
-import { Game } from '../Game';
+import Game from '../Game';
 
 describe('Game', () => {
   it('should render grey background in dark mode', () => {
