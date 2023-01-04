@@ -1,4 +1,4 @@
-import { fetchScores } from '../fetchScores';
+import fetchScores from '../fetchScores';
 
 describe('fetchScores', () => {
   it('should return scores response', async () => {

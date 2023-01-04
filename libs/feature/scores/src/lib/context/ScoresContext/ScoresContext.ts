@@ -1,7 +1,14 @@
 import { createContext } from 'react';
 
-import type { ScoresContextProps } from './ScoresContext.types';
+import type { FetchScoresDateGame } from '../../api/fetchScores';
 
-export const ScoresContext = createContext<ScoresContextProps>(
+export interface ScoresContextProps {
+  games: FetchScoresDateGame[];
+  isLoading: boolean;
+}
+
+const ScoresContext = createContext<ScoresContextProps>(
   {} as ScoresContextProps
 );
+
+export default ScoresContext;

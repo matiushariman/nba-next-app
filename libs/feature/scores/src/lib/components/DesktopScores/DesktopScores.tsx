@@ -9,15 +9,22 @@ import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
 import { useState } from 'react';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
-import { GamesList } from './GamesList';
+import GamesList from './GamesList';
 import { Drawer } from './DesktopScores.styles';
 import { ScoresProvider } from '../../context/ScoresContext';
 import { formatDate } from '../../utils';
 
 import type { Dayjs } from 'dayjs';
-import type { DesktopScoresProps } from './DesktopScores.types';
 
-export const DesktopScores = ({ games, shouldRefetch }: DesktopScoresProps) => {
+import type { FetchScoresDateGame } from '../../api/fetchScores';
+
+export interface DesktopScoresProps {
+  readonly games: FetchScoresDateGame[];
+
+  readonly shouldRefetch: boolean;
+}
+
+const DesktopScores = ({ games, shouldRefetch }: DesktopScoresProps) => {
   const [selectedDate, setSelectedDate] = useState<Dayjs | Date | null>(
     new Date()
   );
@@ -86,3 +93,5 @@ export const DesktopScores = ({ games, shouldRefetch }: DesktopScoresProps) => {
     </Drawer>
   );
 };
+
+export default DesktopScores;

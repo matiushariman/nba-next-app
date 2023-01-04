@@ -1,9 +1,10 @@
 import { rest } from 'msw';
 
 import { mockFetchConferenceStandingsRes } from './mockData';
-import { FetchConferenceStandingsBaseRes } from '../index';
 
-export const handlers = [
+import type { FetchConferenceStandingsBaseRes } from '../lib/api/fetchConferenceStandings';
+
+const handlers = [
   rest.get(
     'https://sg.global.nba.com/stats2/season/conferencestanding.json',
     (req, res, ctx) =>
@@ -15,3 +16,5 @@ export const handlers = [
       )
   ),
 ];
+
+export default handlers;

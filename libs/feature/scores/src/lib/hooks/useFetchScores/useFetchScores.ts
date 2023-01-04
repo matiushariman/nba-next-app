@@ -1,10 +1,19 @@
 import useSWR from 'swr';
 import axios from 'axios';
 
-import type { UseFetchScore } from './useFetchScores.types';
-import type { FetchScoresDateGame } from '../../api';
+import type { SWRConfiguration } from 'swr';
 
-export const useFetchScores = ({ data, config }: UseFetchScore) => {
+import type {
+  FetchScoresReq,
+  FetchScoresDateGame,
+} from '../../api/fetchScores';
+
+export interface UseFetchScore {
+  readonly data: FetchScoresReq;
+  readonly config?: SWRConfiguration;
+}
+
+const useFetchScores = ({ data, config }: UseFetchScore) => {
   return useSWR<FetchScoresDateGame[]>(
     ['/api/scores', data],
     ([url, data]) =>
@@ -12,3 +21,5 @@ export const useFetchScores = ({ data, config }: UseFetchScore) => {
     config
   );
 };
+
+export default useFetchScores;

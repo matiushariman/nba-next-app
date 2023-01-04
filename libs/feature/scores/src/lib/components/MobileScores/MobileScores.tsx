@@ -8,9 +8,14 @@ import { MobileGamesList } from './MobileGamesList';
 import { ScoresProvider } from '../../context/ScoresContext';
 
 import type { Dayjs } from 'dayjs';
-import type { MobileScoresProps } from './MobileScores.types';
+import type { FetchScoresDateGame } from '../../api/fetchScores';
 
-export const MobileScores = ({ games, shouldRefetch }: MobileScoresProps) => {
+export interface MobileScoresProps {
+  readonly games: FetchScoresDateGame[];
+  readonly shouldRefetch: boolean;
+}
+
+const MobileScores = ({ games, shouldRefetch }: MobileScoresProps) => {
   const [selectedDate, setSelectedDate] = useState<Dayjs | Date | null>(
     new Date()
   );
@@ -65,3 +70,5 @@ export const MobileScores = ({ games, shouldRefetch }: MobileScoresProps) => {
     </Paper>
   );
 };
+
+export default MobileScores;

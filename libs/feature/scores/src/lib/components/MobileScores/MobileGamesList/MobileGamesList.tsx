@@ -2,7 +2,7 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import { MobileGame } from './MobileGame';
+import MobileGame from './MobileGame';
 import { useScoresContext } from '../../../context/ScoresContext';
 
 export const MobileGamesList = () => {

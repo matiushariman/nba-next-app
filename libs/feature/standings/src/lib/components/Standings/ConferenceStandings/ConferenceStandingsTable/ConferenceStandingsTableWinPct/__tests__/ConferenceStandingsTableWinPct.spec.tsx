@@ -1,6 +1,6 @@
 import { render, screen } from '@nba-app/standings-test-utils';
 
-import { ConferenceStandingsTableWinPct } from '../ConferenceStandingsTableWinPct';
+import ConferenceStandingsTableWinPct from '../ConferenceStandingsTableWinPct';
 
 describe('ConferenceStandingsTableWinPct', () => {
   it('should render winPct in success color if winPct >= 50', () => {

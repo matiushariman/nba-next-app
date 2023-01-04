@@ -1,6 +1,6 @@
 import { render, screen } from '@nba-app/standings-test-utils';
 
-import { ConferenceStandingsTableStreak } from '../ConferenceStandingsTableStreak';
+import ConferenceStandingsTableStreak from '../ConferenceStandingsTableStreak';
 
 describe('ConferenceStandingsTableStreak', () => {
   it('should render streak in success color if winning', () => {

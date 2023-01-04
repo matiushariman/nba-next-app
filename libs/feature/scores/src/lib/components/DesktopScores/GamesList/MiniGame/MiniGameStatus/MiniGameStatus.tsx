@@ -6,9 +6,18 @@ import {
   displayLiveGameStatusText,
 } from '../../../../../utils';
 
-import type { MiniGameStatusProps } from './MiniGameStatus.types';
+import type {
+  FetchScoresDateGameBoxscore,
+  FetchScoresDateGameProfile,
+} from '../../../../../api/fetchScores';
 
-export const MiniGameStatus = ({
+export type MiniGameStatusProps = Pick<
+  FetchScoresDateGameBoxscore,
+  'status' | 'statusDesc' | 'period' | 'periodClock'
+> &
+  Pick<FetchScoresDateGameProfile, 'dateTimeEt'>;
+
+const MiniGameStatus = ({
   statusDesc,
   status,
   dateTimeEt,
@@ -50,3 +59,5 @@ export const MiniGameStatus = ({
     </Typography>
   );
 };
+
+export default MiniGameStatus;

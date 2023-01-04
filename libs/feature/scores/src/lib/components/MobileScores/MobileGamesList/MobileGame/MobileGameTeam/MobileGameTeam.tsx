@@ -1,10 +1,21 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { TeamLogo } from '@nba-app/ui';
+import { TeamLogo } from '@nba-app/shared-components';
 
-import type { MobileGameTeamProps } from './MobileGameTeam.types';
+import type {
+  FetchScoresDateGameTeamProfile,
+  FetchScoresDateGameTeamScore,
+  FetchScoresDateGameBoxscore,
+} from '../../../../../api/fetchScores';
 
-export const MobileGameTeam = ({
+export interface MobileGameTeamProps
+  extends Pick<FetchScoresDateGameTeamProfile, 'id' | 'name' | 'abbr'>,
+    Pick<FetchScoresDateGameTeamScore, 'score'>,
+    Pick<FetchScoresDateGameBoxscore, 'status'> {
+  teamRecord: string;
+}
+
+const MobileGameTeam = ({
   id,
   name,
   abbr,
@@ -30,3 +41,5 @@ export const MobileGameTeam = ({
     )}
   </Box>
 );
+
+export default MobileGameTeam;

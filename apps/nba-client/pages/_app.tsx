@@ -1,9 +1,9 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import { createEmotionCache } from '@nba-app/ui';
+import { EmotionCache } from '@emotion/react';
 
 import { AllTheProviders } from '../AllTheProviders';
+import createEmotionCache from '../src/createEmotionCache';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -18,15 +18,13 @@ export default function CustomApp({
   pageProps,
 }: CustomAppProps) {
   return (
-    <CacheProvider value={emotionCache}>
-      <AllTheProviders>
-        <Head>
-          <title>NBA Next | Home</title>
-        </Head>
-        <main className="app">
-          <Component {...pageProps} />
-        </main>
-      </AllTheProviders>
-    </CacheProvider>
+    <AllTheProviders emotionCache={emotionCache}>
+      <Head>
+        <title>NBA Next | Home</title>
+      </Head>
+      <main className="app">
+        <Component {...pageProps} />
+      </main>
+    </AllTheProviders>
   );
 }

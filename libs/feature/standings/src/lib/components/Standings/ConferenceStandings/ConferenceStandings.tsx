@@ -1,8 +1,13 @@
 import Stack from '@mui/material/Stack';
-import { ConferenceStandingsTable } from './ConferenceStandingsTable';
-import type { ConferenceStandingsProps } from './ConferenceStandings.types';
+import ConferenceStandingsTable from './ConferenceStandingsTable';
 
-export const ConferenceStandings = ({
+import type { FetchConferenceStandingsStandingGroup } from '../../../api/fetchConferenceStandings';
+
+export interface ConferenceStandingsProps {
+  readonly conferenceStandings: FetchConferenceStandingsStandingGroup[];
+}
+
+const ConferenceStandings = ({
   conferenceStandings,
 }: ConferenceStandingsProps) => (
   <Stack spacing={4}>
@@ -14,3 +19,5 @@ export const ConferenceStandings = ({
     ))}
   </Stack>
 );
+
+export default ConferenceStandings;

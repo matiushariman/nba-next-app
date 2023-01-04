@@ -1,5 +1,5 @@
 import { render, screen } from '@nba-app/scores-test-utils';
-import { MobileGameTeam } from '../MobileGameTeam';
+import MobileGameTeam from '../MobileGameTeam';
 
 describe('MobileGameTeam', () => {
   it('should render team record if game has not started (status 1)', () => {

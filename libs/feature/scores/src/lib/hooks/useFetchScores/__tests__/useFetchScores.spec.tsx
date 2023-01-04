@@ -1,7 +1,7 @@
 import { renderHook, waitFor } from '@nba-app/scores-test-utils';
 import { SWRConfig } from 'swr';
 
-import { useFetchScores } from '../useFetchScores';
+import useFetchScores from '../useFetchScores';
 
 import type { ReactNode } from 'react';
 

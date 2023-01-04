@@ -1,9 +1,9 @@
 import { rest } from 'msw';
 
 import { mockFetchScoresRes } from './mockData';
-import { FetchScoresBaseRes, FetchScoresDateGame } from '..';
+import { FetchScoresBaseRes, FetchScoresDateGame } from '../index';
 
-export const handlers = [
+const handlers = [
   rest.get(
     'https://sg.global.nba.com/stats2/scores/daily.json',
     (req, res, ctx) =>
@@ -18,3 +18,5 @@ export const handlers = [
     )
   ),
 ];
+
+export default handlers;

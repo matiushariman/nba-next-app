@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'apps/**/*.tsx?'
-      - 'libs/**/*.ts'
+      - 'libs/**/*.tsx?'
       - '.github/workflows/integration-ci.yml'
       - '.github/workflows/reusable-setup.yml'
 
@@ -86,8 +86,8 @@ jobs:
         with:
           files: '**/coverage/libs/feature/scores/coverage-final.json'
           flags: feature-scores
-  upload-ui-coverage:
-    name: Upload ui coverage to codecov
+  upload-shared-components-coverage:
+    name: Upload shared-components coverage to codecov
     runs-on: ubuntu-latest
     needs: test
     steps:
@@ -101,8 +101,8 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
-          files: '**/coverage/libs/ui/coverage-final.json'
-          flags: ui
+          files: '**/coverage/libs/shared-components/coverage-final.json'
+          flags: shared-components
   upload-nba-client-coverage:
     name: Upload nba-client coverage to codecov
     runs-on: ubuntu-latest

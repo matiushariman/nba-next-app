@@ -1,46 +1,39 @@
-import { FC, ReactElement, ReactNode, useMemo, useState } from 'react';
+import { FC, ReactElement, ReactNode } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { PaletteMode } from '@mui/material';
-import { ColorModeContext } from '@nba-app/ui';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { SWRConfig } from 'swr';
+import { Roboto } from '@next/font/google';
+
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Helvetica', 'Arial', 'sans-serif'],
+});
 
 const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'> & { mode?: PaletteMode }
 ) => {
   const AllTheProviders: FC<{ children: ReactNode }> = ({ children }) => {
-    const [mode, setMode] = useState<PaletteMode>(options?.mode ?? 'light');
-
-    const colorMode = useMemo(
-      () => ({
-        toggleColorMode: () => {
-          setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-        },
-      }),
-      []
-    );
-
-    const theme = useMemo(
-      () =>
-        createTheme({
-          palette: {
-            mode,
-          },
-        }),
-      [mode]
-    );
+    const theme = createTheme({
+      palette: {
+        mode: options?.mode ?? 'light',
+      },
+      typography: {
+        fontFamily: roboto.style.fontFamily,
+      },
+    });
 
     return (
-      <ColorModeContext.Provider value={colorMode}>
-        <ThemeProvider theme={theme}>
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <SWRConfig value={{ dedupingInterval: 0 }}>{children}</SWRConfig>
-          </LocalizationProvider>
-        </ThemeProvider>
-      </ColorModeContext.Provider>
+      <ThemeProvider theme={theme}>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <SWRConfig value={{ dedupingInterval: 0 }}>{children}</SWRConfig>
+        </LocalizationProvider>
+      </ThemeProvider>
     );
   };
 

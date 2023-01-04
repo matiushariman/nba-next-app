@@ -1,5 +1,5 @@
 import { render, screen } from '@nba-app/scores-test-utils';
-import { MiniGame } from '../MiniGame';
+import MiniGame from '../MiniGame';
 
 describe('MiniGame', () => {
   it('should render grey background in dark mode', () => {

@@ -1,8 +1,10 @@
 import TableCell from '@mui/material/TableCell';
 
-import type { ConferenceStandingsTableStreakProps } from './ConferenceStandingsTableStreak.types';
+export interface ConferenceStandingsTableStreakProps {
+  readonly streak: string;
+}
 
-export const ConferenceStandingsTableStreak = ({
+const ConferenceStandingsTableStreak = ({
   streak,
 }: ConferenceStandingsTableStreakProps) => {
   const isWinningRecord = streak.includes('Won');
@@ -21,3 +23,5 @@ export const ConferenceStandingsTableStreak = ({
     </TableCell>
   );
 };
+
+export default ConferenceStandingsTableStreak;

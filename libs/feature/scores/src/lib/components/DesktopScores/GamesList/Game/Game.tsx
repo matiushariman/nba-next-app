@@ -5,13 +5,17 @@ import Box from '@mui/material/Box';
 
 import { displayFormattedTeamRecord } from '../../../../utils';
 
-import { GameTeam } from './GameTeam';
-import { GameScore } from './GameScore';
-import { GameStatus } from './GameStatus';
+import GameTeam from './GameTeam';
+import GameScore from './GameScore';
+import GameStatus from './GameStatus';
 
-import type { GameProps } from './Game.types';
+import type { FetchScoresDateGame } from '../../../../api/fetchScores';
 
-export const Game = ({ game }: GameProps) => (
+export interface GameProps {
+  readonly game: FetchScoresDateGame;
+}
+
+const Game = ({ game }: GameProps) => (
   <Card
     sx={(theme) => ({
       width: '100%',
@@ -61,3 +65,5 @@ export const Game = ({ game }: GameProps) => (
     </CardContent>
   </Card>
 );
+
+export default Game;

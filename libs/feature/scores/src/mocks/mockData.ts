@@ -1,4 +1,4 @@
-import { FetchScoresBaseRes } from '../lib';
+import { FetchScoresBaseRes } from '../lib/api/fetchScores';
 
 export const mockFetchScoresRes: FetchScoresBaseRes = {
   payload: {
