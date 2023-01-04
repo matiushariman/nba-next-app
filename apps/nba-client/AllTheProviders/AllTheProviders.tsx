@@ -1,14 +1,25 @@
 import { useMemo, useState } from 'react';
 import { PaletteMode } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { ColorModeContext } from '@nba-app/ui';
+import { CacheProvider, EmotionCache } from '@emotion/react';
 
-import type { AllTheProvidersProps } from './AllTheProviders.types';
+import createTheme from '../src/createTheme';
 
-export const AllTheProviders = ({ children }: AllTheProvidersProps) => {
+import type { ReactNode } from 'react';
+
+export interface AllTheProvidersProps {
+  readonly children?: ReactNode;
+  readonly emotionCache?: EmotionCache;
+}
+
+export const AllTheProviders = ({
+  children,
+  emotionCache,
+}: AllTheProvidersProps) => {
   const [mode, setMode] = useState<PaletteMode>('light');
 
   const colorMode = useMemo(
@@ -20,24 +31,18 @@ export const AllTheProviders = ({ children }: AllTheProvidersProps) => {
     []
   );
 
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode]
-  );
+  const theme = useMemo(() => createTheme(mode), [mode]);
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          {children}
-        </LocalizationProvider>
-        <CssBaseline />
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+    <CacheProvider value={emotionCache}>
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            {children}
+          </LocalizationProvider>
+          <CssBaseline />
+        </ThemeProvider>
+      </ColorModeContext.Provider>
+    </CacheProvider>
   );
 };
