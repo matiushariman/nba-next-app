@@ -57,6 +57,7 @@ specifiers:
   axios: 1.2.1
   babel-jest: 28.1.1
   babel-loader: 8.1.0
+  clsx: ^1.2.1
   core-js: ^3.6.5
   dayjs: 1.11.7
   eslint: ~8.15.0
@@ -106,6 +107,7 @@ dependencies:
   '@nrwl/next': 15.4.5_jxb4toxpfxgssykzsltnigrnpu
   '@swc/helpers': 0.4.14
   axios: 1.2.1
+  clsx: 1.2.1
   core-js: 3.27.1
   dayjs: 1.11.7
   next: 13.1.1_a7mipu7kvrstgwvi56qu2qyzhe
