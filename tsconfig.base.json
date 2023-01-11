@@ -21,6 +21,7 @@
         "libs/feature/scores-test-utils/src/index.ts"
       ],
       "@nba-app/shared-components": ["libs/shared-components/src/index.ts"],
+      "@nba-app/shared-ui": ["libs/shared/ui/src/index.ts"],
       "@nba-app/standings-test-utils": [
         "libs/feature/standings-test-utils/src/index.ts"
       ],

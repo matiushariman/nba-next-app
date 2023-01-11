@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
 import createTheme, { roboto } from '../src/createTheme';
 import createEmotionCache from '../src/createEmotionCache';
+import '../styles/globals.css';
 
 const theme = createTheme();
 
