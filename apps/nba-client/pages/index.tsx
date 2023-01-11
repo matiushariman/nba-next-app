@@ -12,7 +12,7 @@ import {
   FetchScoresDateGame,
   DesktopScores,
   MobileScores,
-} from '@nba-app/feature-scores';
+} from '@nba-app/feature-scores-old';
 import { Header } from '@nba-app/shared-ui';
 import useDesktopView from '../hooks/useDesktopView';
 

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { fetchScores, FetchScoresReq } from '@nba-app/feature-scores';
+import { fetchScores, FetchScoresReq } from '@nba-app/feature-scores-old';
 
 export default async function scoresHandler(
   req: NextApiRequest,

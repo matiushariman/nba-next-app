@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nba-app/feature-scores": ["libs/feature/scores/src/index.ts"],
+      "@nba-app/feature-scores-old": ["libs/feature/scores-old/src/index.ts"],
       "@nba-app/feature-standings": ["libs/feature/standings/src/index.ts"],
       "@nba-app/scores-test-utils": [
         "libs/feature/scores-test-utils/src/index.ts"

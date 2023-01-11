@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'feature-scores',
+  displayName: 'feature-scores-old',
   preset: '../../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': [
@@ -9,7 +9,7 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/feature/scores',
+  coverageDirectory: '../../../coverage/libs/feature/scores-old',
   setupFilesAfterEnv: ['./jest.setup.ts'],
   coverageReporters: ['json', ['text', { skipFull: true }]],
 };
