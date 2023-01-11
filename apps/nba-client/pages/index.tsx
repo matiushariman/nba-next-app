@@ -13,8 +13,7 @@ import {
   DesktopScores,
   MobileScores,
 } from '@nba-app/feature-scores';
-
-import { Header } from '../components/Header';
+import { Header } from '@nba-app/shared-ui';
 import useDesktopView from '../hooks/useDesktopView';
 
 interface HomeProps {

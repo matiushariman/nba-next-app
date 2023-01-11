@@ -1,13 +1,15 @@
-import styles from './Header.module.css';
+import Image from 'next/image';
 
-/* eslint-disable-next-line */
-export interface HeaderProps {}
-
-export function Header(props: HeaderProps) {
+export function Header() {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to Header!</h1>
-    </div>
+    <header className="bg-gradient-to-r from-primary to-primary-light min-h-[64px] px-4 flex items-center">
+      <Image
+        src="https://cdn.nba.com/logos/leagues/logo-nba.svg"
+        alt="NBA"
+        width={52}
+        height={30}
+      />
+    </header>
   );
 }
 
