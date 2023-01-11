@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { TeamLogo } from '@nba-app/shared-components';
+import { TeamLogo } from '@nba-app/shared-ui';
 
 import type { FetchScoresDateGameTeamProfile } from '../../../../../api/fetchScores';
 
