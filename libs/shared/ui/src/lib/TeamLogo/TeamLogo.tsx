@@ -15,7 +15,7 @@ export const TeamLogo = ({
 }: TeamLogoProps) => {
   return (
     <Image
-      src={`https://cdn.nba.com/logos/nba/${id}/global/D/logo.svg`}
+      src={`https://cdn.nba.com/logos/nba/${id}/global/L/logo.svg`}
       alt={name}
       width={width}
       height={height}

@@ -1,49 +1,40 @@
 import { GameDetails } from '@nba-app/scores-components';
 import { formatDate } from '@nba-app/scores-utils';
+import { createGameDetailsProps } from './Scoreboard.utils';
 
-/* eslint-disable-next-line */
-export interface ScoreboardProps {}
+import type { FetchScoresDateGame } from '@nba-app/scores-api';
 
-const game = {
-  statusDesc: 'FINAL',
-  dateTimeEt: '2022-12-29T19:00',
-  period: '4',
-  periodClock: '12:00',
-  awayTeam: {
-    teamId: '1610612740',
-    teamName: 'Pelicans',
-    teamAbbr: 'NOP',
-    score: 114,
-    teamRecord: '25-17',
-  },
-  homeTeam: {
-    teamId: '1610612738',
-    teamName: 'Celtics',
-    teamAbbr: 'BOS',
-    score: 125,
-    teamRecord: '30-12',
-  },
-};
-export function Scoreboard(props: ScoreboardProps) {
+export interface ScoreboardProps {
+  games: FetchScoresDateGame[];
+}
+
+export function Scoreboard({ games }: ScoreboardProps) {
   return (
     <div className="border">
-      <div className="container mx-auto flex">
-        <div className="w-48 p-3">
+      <div className="container mx-auto flex min-h-[107px]">
+        <div className="w-40 space-y-1 p-3">
           <p className="text-sm font-bold">
             {formatDate(new Date(), 'ddd, MMM D')}
           </p>
+          <p className="text-sm">{games.length} game(s)</p>
         </div>
-        <div className="flex-grow divide-x overflow-auto whitespace-nowrap">
-          <GameDetails status="3" {...game} />
-          <GameDetails status="3" {...game} />
-          <GameDetails status="3" {...game} />
-          <GameDetails status="3" {...game} />
-          <GameDetails status="3" {...game} />
-          <GameDetails status="3" {...game} />
-          <GameDetails status="3" {...game} />
-          <GameDetails status="3" {...game} />
-          <GameDetails status="3" {...game} />
-        </div>
+        {games.length > 0 ? (
+          <div
+            className="flex-grow divide-x overflow-auto whitespace-nowrap"
+            aria-label="list of games"
+          >
+            {games.map((game) => (
+              <GameDetails
+                key={game.profile.gameId}
+                {...createGameDetailsProps(game)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="flex flex-grow items-center justify-center">
+            <p className="font-bold">No games scheduled</p>
+          </div>
+        )}
       </div>
     </div>
   );
