@@ -20,6 +20,7 @@
       "@nba-app/scores-api": ["libs/scores/api/src/index.ts"],
       "@nba-app/scores-components": ["libs/scores/components/src/index.ts"],
       "@nba-app/scores-feature": ["libs/scores/feature/src/index.ts"],
+      "@nba-app/scores-feature-dep": ["libs/scores/feature-dep/src/index.ts"],
       "@nba-app/scores-test-utils": [
         "libs/feature/scores-test-utils/src/index.ts"
       ],

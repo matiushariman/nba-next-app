@@ -1,7 +1,7 @@
 {
-  "name": "scores-feature",
+  "name": "scores-feature-dep",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/scores/feature/src",
+  "sourceRoot": "libs/scores/feature-dep/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,31 +9,15 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/scores/feature/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "build": {
-      "executor": "@nrwl/vite:build",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "outputPath": "dist/libs/scores/feature"
-      },
-      "configurations": {
-        "development": {
-          "mode": "development"
-        },
-        "production": {
-          "mode": "production"
-        }
+        "lintFilePatterns": ["libs/scores/feature-dep/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/scores/feature"],
+      "outputs": ["coverage/libs/scores/feature-dep"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/libs/scores/feature"
+        "reportsDirectory": "../../../coverage/libs/scores/feature-dep"
       }
     },
     "storybook": {
@@ -42,7 +26,7 @@
         "uiFramework": "@storybook/react",
         "port": 4400,
         "config": {
-          "configFolder": "libs/scores/feature/.storybook"
+          "configFolder": "libs/scores/feature-dep/.storybook"
         }
       },
       "configurations": {
@@ -58,7 +42,7 @@
         "uiFramework": "@storybook/react",
         "outputPath": "dist/storybook/scores-feature",
         "config": {
-          "configFolder": "libs/scores/feature/.storybook"
+          "configFolder": "libs/scores/feature-dep/.storybook"
         }
       },
       "configurations": {
