@@ -1,0 +1,10 @@
+name: Integration CI
+
+on:
+  pull_request:
+    types: [ opened, synchronize ]
+
+jobs:
+  setup:
+    name: Setup dependencies
+    uses: ./.github/workflows/reusable-setup.yml
