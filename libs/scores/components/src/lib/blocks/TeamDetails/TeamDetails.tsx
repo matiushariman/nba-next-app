@@ -22,13 +22,13 @@ export function TeamDetails({
 }: TeamDetailsProps) {
   return (
     <div className="flex items-center space-x-1">
-      <div className="w-20">
+      <div className="w-24">
         <TeamName teamId={teamId} teamName={teamName} teamAbbr={teamAbbr} />
       </div>
       {hasGameStarted ? (
         <TeamScore score={score} isWinner={isWinner} />
       ) : (
-        <p className="text-sm">{teamRecord}</p>
+        <p className="text-sm text-gray-400">{teamRecord}</p>
       )}
     </div>
   );
