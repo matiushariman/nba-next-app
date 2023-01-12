@@ -4,6 +4,16 @@
   "sourceRoot": "libs/scores/api/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/scores/api",
+        "main": "libs/scores/api/src/index.ts",
+        "tsConfig": "libs/scores/api/tsconfig.lib.json",
+        "assets": []
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

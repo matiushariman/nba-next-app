@@ -2,7 +2,7 @@ import { GameDetails } from '@nba-app/scores-components';
 import { formatDate } from '@nba-app/scores-utils';
 import { createGameDetailsProps } from './Scoreboard.utils';
 
-import type { FetchScoresDateGame } from '@nba-app/scores-api';
+import type { FetchScoresDateGame } from '@nba-app/scores-api-dep';
 
 export interface ScoreboardProps {
   games: FetchScoresDateGame[];
