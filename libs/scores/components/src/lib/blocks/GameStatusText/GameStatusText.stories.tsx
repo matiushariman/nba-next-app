@@ -3,7 +3,7 @@ import { GameStatusText } from './GameStatusText';
 
 const Story: ComponentMeta<typeof GameStatusText> = {
   component: GameStatusText,
-  title: 'GameStatusText',
+  title: 'blocks/GameStatusText',
 };
 export default Story;
 

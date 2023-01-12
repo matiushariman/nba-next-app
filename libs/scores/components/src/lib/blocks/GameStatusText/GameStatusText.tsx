@@ -23,19 +23,19 @@ export function GameStatusText({
     const localTime = convertESTtoLocalTime(dateTimeEt);
 
     return (
-      <p className="text-sm" aria-label="game time in local time">
+      <p className="text-xs" aria-label="game time in local time">
         {formatDate(localTime, 'h:mm A')}
       </p>
     );
   } else if (status === '2') {
     return (
-      <p className="text-sm text-red-600">
+      <p className="text-xs text-red-600">
         {displayLiveGameStatusText(period, periodClock, statusDesc)}
       </p>
     );
   }
 
-  return <p className="text-sm">{statusDesc}</p>;
+  return <p className="text-xs">{statusDesc}</p>;
 }
 
 export default GameStatusText;
