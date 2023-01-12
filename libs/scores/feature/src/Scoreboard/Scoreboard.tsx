@@ -10,7 +10,7 @@ export interface ScoreboardProps {
 
 export function Scoreboard({ games }: ScoreboardProps) {
   return (
-    <div className="border">
+    <div className="border bg-white">
       <div className="container mx-auto flex min-h-[90px]">
         <div className="w-40 space-y-1 p-3">
           <p className="text-sm font-bold">

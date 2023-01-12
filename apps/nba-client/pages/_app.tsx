@@ -9,7 +9,7 @@ export default function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>NBA Next | Home</title>
       </Head>
-      <main className="app">
+      <main className="app h-screen bg-gray-100">
         <Component {...pageProps} />
       </main>
     </>
