@@ -1,33 +1,3 @@
-#on: workflow_call
-#
-#jobs:
-#  setup:
-#    name: reusable-setup.yml
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v3
-#      - name: Setup node
-#        uses: actions/setup-node@v3
-#        with:
-#          node-version: '16'
-#          cache: 'yarn'
-#      - name: Cache node modules
-#        id: cache-npm
-#        uses: actions/cache@v3
-#        env:
-#          cache-name: cache-node-modules
-#        with:
-#          path: '**/node_modules'
-#          key: ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock.json') }}
-#          restore-keys: |
-#            ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock.json') }}
-#            ${{ runner.os }}-modules-${{ env.cache-name }}-
-#      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
-#        name: Install dependencies
-#        run: yarn install --frozen-lockfile
-#
-
 name: Setup
 
 on: workflow_call
@@ -35,11 +5,9 @@ on: workflow_call
 jobs:
   setup:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node-version: [15]
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
           version: 7
@@ -48,5 +16,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - name: Install dependencies
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: Install dependencies
         run: pnpm install
