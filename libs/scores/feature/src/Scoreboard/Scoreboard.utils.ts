@@ -1,5 +1,5 @@
 import type { GameDetailsProps } from '@nba-app/scores-components';
-import type { FetchScoresDateGame } from '@nba-app/scores-api-dep';
+import type { FetchScoresDateGame } from '@nba-app/scores-api';
 
 export const createGameDetailsProps = (
   game: FetchScoresDateGame

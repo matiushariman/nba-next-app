@@ -1,5 +1,5 @@
 import { createGameDetailsProps } from './Scoreboard.utils';
-import type { FetchScoresDateGame } from '@nba-app/scores-api-dep';
+import type { FetchScoresDateGame } from '@nba-app/scores-api';
 
 const mockGame: FetchScoresDateGame = {
   profile: {
