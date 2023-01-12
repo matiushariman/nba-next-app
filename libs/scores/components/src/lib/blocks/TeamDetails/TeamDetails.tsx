@@ -22,7 +22,7 @@ export function TeamDetails({
 }: TeamDetailsProps) {
   return (
     <div className="flex items-center space-x-1">
-      <div className="w-24">
+      <div className="min-w-[96px] flex-grow">
         <TeamName teamId={teamId} teamName={teamName} teamAbbr={teamAbbr} />
       </div>
       {hasGameStarted ? (

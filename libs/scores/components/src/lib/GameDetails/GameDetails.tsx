@@ -1,37 +1,55 @@
 import { GameStatusText } from '../blocks/GameStatusText';
 import { TeamDetails } from '../blocks/TeamDetails';
 
-/* eslint-disable-next-line */
-export interface GameDetailsProps {}
+interface Team {
+  teamId: string;
+  teamName: string;
+  teamAbbr: string;
+  score: number;
+  teamRecord: string;
+}
 
-export function GameDetails(props: GameDetailsProps) {
+export interface GameDetailsProps {
+  statusDesc: string;
+  status: '1' | '2' | '3';
+  dateTimeEt: string;
+  period: string;
+  periodClock: string;
+  homeTeam: Team;
+  awayTeam: Team;
+}
+
+export function GameDetails({
+  status,
+  statusDesc,
+  periodClock,
+  period,
+  dateTimeEt,
+  awayTeam,
+  homeTeam,
+}: GameDetailsProps) {
+  const hasGameStarted = status !== '1';
+  const hasGameEnded = status === '3';
+
   return (
-    <div className="inline-block cursor-pointer space-y-1.5 bg-black bg-opacity-0 p-2 transition-opacity hover:bg-opacity-10">
+    <div className="inline-block w-40 cursor-pointer space-y-1.5 bg-black bg-opacity-0 p-2 transition-opacity hover:bg-opacity-10">
       <GameStatusText
-        statusDesc="FINAL"
-        status="3"
-        dateTimeEt=""
-        period="4"
-        periodClock=""
+        statusDesc={statusDesc}
+        status={status}
+        dateTimeEt={dateTimeEt}
+        period={period}
+        periodClock={periodClock}
       />
       <div className="space-y-1">
         <TeamDetails
-          teamId="1610612740"
-          teamName="Pelicans"
-          teamAbbr="NOP"
-          score={114}
-          teamRecord="25-17"
-          hasGameStarted
-          isWinner={false}
+          {...awayTeam}
+          hasGameStarted={hasGameStarted}
+          isWinner={hasGameEnded && awayTeam.score > homeTeam.score}
         />
         <TeamDetails
-          teamId="1610612738"
-          teamName="Celtics"
-          teamAbbr="BOS"
-          score={125}
-          teamRecord="30-12"
-          hasGameStarted
-          isWinner
+          {...homeTeam}
+          hasGameStarted={hasGameStarted}
+          isWinner={hasGameEnded && homeTeam.score > awayTeam.score}
         />
       </div>
     </div>
