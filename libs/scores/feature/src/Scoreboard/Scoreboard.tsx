@@ -11,7 +11,7 @@ export interface ScoreboardProps {
 export function Scoreboard({ games }: ScoreboardProps) {
   return (
     <div className="border">
-      <div className="container mx-auto flex min-h-[107px]">
+      <div className="container mx-auto flex min-h-[90px]">
         <div className="w-40 space-y-1 p-3">
           <p className="text-sm font-bold">
             {formatDate(new Date(), 'ddd, MMM D')}
