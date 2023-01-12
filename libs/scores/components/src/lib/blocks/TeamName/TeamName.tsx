@@ -8,7 +8,7 @@ export interface TeamScoreProps {
 
 export function TeamName({ teamName, teamId, teamAbbr }: TeamScoreProps) {
   return (
-    <div className="flex space-x-2 items-center">
+    <div className="flex items-center space-x-2">
       <TeamLogo id={teamId} name={teamName} width={24} height={24} />
       <p className="text-sm font-bold">{teamAbbr}</p>
     </div>

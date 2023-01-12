@@ -78,6 +78,7 @@ specifiers:
   nx: 15.4.5
   postcss: 8.4.19
   prettier: ^2.6.2
+  prettier-plugin-tailwindcss: ^0.2.1
   react: 18.2.0
   react-dom: 18.2.0
   react-test-renderer: 18.2.0
@@ -181,6 +182,7 @@ devDependencies:
   nx: 15.4.5_@swc+core@1.3.26
   postcss: 8.4.19
   prettier: 2.8.2
+  prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.2
   react-test-renderer: 18.2.0_react@18.2.0
   swc-loader: 0.1.15_v4imsvpumnwpgduroyqmpcfjiy
   tailwindcss: 3.2.4_v776zzvn44o7tpgzieipaairwm
@@ -16297,6 +16299,15 @@ packages:
   /prepend-http/2.0.0:
     resolution: {integrity: sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==}
     engines: {node: '>=4'}
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.2.1_prettier@2.8.2:
+    resolution: {integrity: sha512-aIO8IguumORyRsmT+E7JfJ3A9FEoyhqZR7Au7TBOege3VZkgMvHJMkufeYp4zjnDK2iq4ktkvGMNOQR9T8lisQ==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.8.2
     dev: true
 
   /prettier/2.3.0:
