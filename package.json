@@ -8,7 +8,8 @@
     "build": "nx build nba-client --prod",
     "lint:all": "nx run-many --target=lint --exclude test-utils ui-test-utils",
     "test:all": "nx run-many --target=test --exclude test-utils ui-test-utils",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate:storybook:config": "nx g @nrwl/storybook:configuration --bundler=vite --uiFramework=@storybook/react"
   },
   "private": true,
   "devDependencies": {
