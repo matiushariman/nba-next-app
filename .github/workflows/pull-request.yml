@@ -34,7 +34,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
       - name: Run lint
-        run: pnpm nx affected:lint
+        run: pnpm nx run-many --target:lint
   test:
     name: Run unit tests
     runs-on: ubuntu-latest
@@ -61,4 +61,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
       - name: Run unit test
-        run: pnpm nx affected:test
+        run: pnpm nx run-many --target:test
