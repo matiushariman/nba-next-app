@@ -1,3 +1,9 @@
+import {
+  displayLiveGameStatusText,
+  formatDate,
+  convertESTtoLocalTime,
+} from '@nba-app/scores-utils';
+
 export interface GameStatusTextProps {
   statusDesc: string;
   status: '1' | '2' | '3';
@@ -14,11 +20,17 @@ export function GameStatusText({
   periodClock,
 }: GameStatusTextProps) {
   if (status === '1') {
-    return <p className="text-sm">{dateTimeEt}</p>;
+    const localTime = convertESTtoLocalTime(dateTimeEt);
+
+    return (
+      <p className="text-sm" aria-label="game time in local time">
+        {formatDate(localTime, 'h:mm A')}
+      </p>
+    );
   } else if (status === '2') {
     return (
       <p className="text-sm text-red-600">
-        {period} {periodClock}
+        {displayLiveGameStatusText(period, periodClock, statusDesc)}
       </p>
     );
   }
