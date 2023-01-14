@@ -41,9 +41,7 @@
       "options": {
         "uiFramework": "@storybook/react",
         "port": 4400,
-        "config": {
-          "configFolder": "libs/scores/feature/.storybook"
-        }
+        "configDir": "libs/scores/feature/.storybook"
       },
       "configurations": {
         "ci": {
@@ -53,13 +51,11 @@
     },
     "build-storybook": {
       "executor": "@nrwl/storybook:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": ["{options.outputDir}"],
       "options": {
         "uiFramework": "@storybook/react",
-        "outputPath": "dist/storybook/scores-feature",
-        "config": {
-          "configFolder": "libs/scores/feature/.storybook"
-        }
+        "configDir": "libs/scores/feature/.storybook",
+        "outputDir": "dist/storybook/scores-feature"
       },
       "configurations": {
         "ci": {
