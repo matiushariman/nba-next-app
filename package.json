@@ -2,7 +2,9 @@
   "name": "nba-next",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "private": true,
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
@@ -30,8 +32,10 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.0",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
+    "lint-staged": "^13.1.0",
     "nx": "15.5.1",
     "postcss": "8.4.19",
     "prettier": "^2.6.2",
