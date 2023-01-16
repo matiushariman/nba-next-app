@@ -14,18 +14,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@nba-app/feature-standings": ["libs/feature/standings/src/index.ts"],
-      "@nba-app/scores-api": ["libs/scores/api/src/index.ts"],
-      "@nba-app/scores-components": ["libs/scores/components/src/index.ts"],
-      "@nba-app/scores-feature": ["libs/scores/feature/src/index.ts"],
-      "@nba-app/scores-utils": ["libs/scores/utils/src/index.ts"],
-      "@nba-app/shared-ui": ["libs/shared/ui/src/index.ts"],
-      "@nba-app/standings-test-utils": [
-        "libs/feature/standings-test-utils/src/index.ts"
-      ],
-      "@nba-app/test-utils": ["libs/test-utils/src/index.ts"]
-    }
+    "paths": {}
   },
   "exclude": ["node_modules", "tmp"]
 }
